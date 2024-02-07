@@ -2,6 +2,7 @@ name: nrel-ai
 channels:
   - default
   - conda-forge
+  - pytorch
 
 dependencies:
   - python<=3.11
@@ -9,6 +10,8 @@ dependencies:
   - pip>=20.3
   - pip:
     - git+https://github.com/NREL/tf-melt.git
+    - pytorch
+    - torchvision
     - matplotlib
     - scikit-learn
     - jupyter_contrib_nbextensions
