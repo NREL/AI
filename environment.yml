@@ -10,8 +10,9 @@ dependencies:
   - pip>=20.3
   - pip:
     - git+https://github.com/NREL/tf-melt.git
-    - pytorch
+    - torch
     - torchvision
+    - torchinfo
     - matplotlib
     - scikit-learn
     - jupyter_contrib_nbextensions

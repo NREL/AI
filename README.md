@@ -19,7 +19,7 @@ The modern machine learning landscape is one that is divided between various pac
 The tutorials are divided into sections aimed at covering the wide breadth of ML techniques useful for scientific and general ML.
 
 
-## Supervised
+## Supervised Learning
 
 Supervised machine learning tasks use **labeled** datasets to train models for predictions and classification tasks. The tutorials in this folder cover the following subjects:
 
