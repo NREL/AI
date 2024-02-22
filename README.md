@@ -23,14 +23,22 @@ The tutorials are divided into sections aimed at covering the wide breadth of ML
 
 Supervised machine learning tasks use **labeled** datasets to train models for predictions and classification tasks. The tutorials in this folder cover the following subjects:
 
-1. Tutorial 1: Artificial Neural Networks for Multidimensional Regression
+### Regression
+
+1. Artificial Neural Networks for Multidimensional Regression
     * Generating multidimensional data for testing
     * Preprocessing data for training, validation, and testing
     * Creating and training an Artificial Neural Network (ANN)
     * Visualizing and interogating the performance of the model
     * Brief overview of hyperparameters
 
-2. Tutorial 2: Bayesian Neural Networks for Probabilistic Regression and Uncertainty Quantification
+2. Uncertainty Quantification for Multidimensional Probabilistic Regression
+    * Generating multidimensional data with noise added
+    * Preprocessing data
+    * Creating and training an ANN, Bayesian Last Layer (BLL), and Bayesian Neural Network (BNN)
+    * Evaluating the ANN, BLL, and BNN to determine the epistemic and aleatoric uncertainties
+    * Visualizing and interpretting the results of the models in the context of UQ
+
 
 
 ## Unsupervised Learning
