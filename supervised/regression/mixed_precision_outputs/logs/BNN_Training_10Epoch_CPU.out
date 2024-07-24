@@ -1,0 +1,452 @@
+Activating Intel modules.
+2024-07-22 17:17:58.119013: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-22 17:17:58.391884: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-22 17:17:58.392338: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-22 17:17:58.434132: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-22 17:17:58.541392: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-22 17:18:00.252545: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/tensorflow_probability/python/layers/util.py:98: UserWarning: `layer.add_variable` is deprecated and will be removed in a future version. Please use the `layer.add_weight()` method instead.
+  loc = add_variable_fn(
+/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/tensorflow_probability/python/layers/util.py:108: UserWarning: `layer.add_variable` is deprecated and will be removed in a future version. Please use the `layer.add_weight()` method instead.
+  untransformed_scale = add_variable_fn(
+/home/ttahmid/applications_test/tf-melt/tfmelt/models.py:574: UserWarning: Loss function is overridden when using aleatoric uncertainty. Using the negative log likelihood loss function.
+  warnings.warn(
+Intel CPU detected. AMX is enabled
+Shape of x: (50000, 4000), Shape of y: (50000, 10)
+Training model with FP32
+Model: "bayesian_neural_network"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_dropout (Dropout)     multiple                  0         
+                                                                 
+ output (BayesianAleatoricO  multiple                  40980     
+ utput)                                                          
+                                                                 
+ bayesian_block_0 (Bayesian  multiple                  168297120 
+ Block)                                                          
+                                                                 
+=================================================================
+Total params: 168338100 (642.16 MB)
+Trainable params: 168296052 (642.00 MB)
+Non-trainable params: 42048 (164.25 KB)
+_________________________________________________________________
+Model: "output"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ pre_aleatoric (DenseFlipou  multiple                  40980     
+ t)                                                              
+                                                                 
+ distribution_output (Distr  multiple                  0         
+ ibutionLambda)                                                  
+                                                                 
+=================================================================
+Total params: 40980 (160.08 KB)
+Trainable params: 40980 (160.08 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Model: "bayesian_block_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ activation_0 (Activation)   multiple                  0         
+                                                                 
+ activation_1 (Activation)   multiple                  0         
+                                                                 
+ activation_2 (Activation)   multiple                  0         
+                                                                 
+ activation_3 (Activation)   multiple                  0         
+                                                                 
+ activation_4 (Activation)   multiple                  0         
+                                                                 
+ activation_5 (Activation)   multiple                  0         
+                                                                 
+ dropout_0 (Dropout)         multiple                  0         
+                                                                 
+ dropout_1 (Dropout)         multiple                  0         
+                                                                 
+ dropout_2 (Dropout)         multiple                  0         
+                                                                 
+ dropout_3 (Dropout)         multiple                  0         
+                                                                 
+ dropout_4 (Dropout)         multiple                  0         
+                                                                 
+ dropout_5 (Dropout)         multiple                  0         
+                                                                 
+ batch_norm_0 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_1 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_2 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_3 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_4 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_5 (BatchNormali  multiple                  4096      
+ zation)                                                         
+                                                                 
+ bayesian_0 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_1 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_2 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_3 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_4 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_5 (DenseFlipout)   multiple                  8193024   
+                                                                 
+=================================================================
+Total params: 168297120 (642.00 MB)
+Trainable params: 168255072 (641.84 MB)
+Non-trainable params: 42048 (164.25 KB)
+_________________________________________________________________
+[codecarbon INFO @ 17:18:17] [setup] RAM Tracking...
+[codecarbon INFO @ 17:18:17] [setup] GPU Tracking...
+[codecarbon INFO @ 17:18:17] No GPU found.
+[codecarbon INFO @ 17:18:17] [setup] CPU Tracking...
+[codecarbon INFO @ 17:18:17] Tracking Intel CPU via RAPL interface
+[codecarbon INFO @ 17:18:18] >>> Tracker's metadata:
+[codecarbon INFO @ 17:18:18]   Platform system: Linux-4.18.0-477.10.1.el8_8.x86_64-x86_64-with-glibc2.28
+[codecarbon INFO @ 17:18:18]   Python version: 3.11.9
+[codecarbon INFO @ 17:18:18]   CodeCarbon version: 2.5.0
+[codecarbon INFO @ 17:18:18]   Available RAM : 246.064 GB
+[codecarbon INFO @ 17:18:18]   CPU count: 104
+[codecarbon INFO @ 17:18:18]   CPU model: Intel(R) Xeon(R) Platinum 8470QL
+[codecarbon INFO @ 17:18:18]   GPU count: None
+[codecarbon INFO @ 17:18:18]   GPU model: None
+[codecarbon INFO @ 17:18:21] Saving emissions data to file /home/ttahmid/applications_test/tf-melt/examples/emissions.csv
+Epoch 1/10
+ 1/10 [==>...........................] - ETA: 38s - loss: 5336.1997 2/10 [=====>........................] - ETA: 8s - loss: 5334.7959  3/10 [========>.....................] - ETA: 6s - loss: 5333.4951 4/10 [===========>..................] - ETA: 5s - loss: 5332.2954 5/10 [==============>...............] - ETA: 4s - loss: 5331.1611 6/10 [=================>............] - ETA: 3s - loss: 5330.0913 7/10 [====================>.........] - ETA: 2s - loss: 5329.0435 8/10 [=======================>......] - ETA: 1s - loss: 5328.0215 9/10 [==========================>...] - ETA: 0s - loss: 5327.002410/10 [==============================] - ETA: 0s - loss: 5325.9917[codecarbon INFO @ 17:18:36] Energy consumed for RAM : 0.000385 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 17:18:36] Energy consumed for all CPUs : 0.002496 kWh. Total CPU Power : 598.9215854337999 W
+[codecarbon INFO @ 17:18:36] 0.002880 kWh of electricity used since the beginning.
+10/10 [==============================] - 14s 1s/step - loss: 5325.9917 - val_loss: 167216240.0000
+Epoch 2/10
+ 1/10 [==>...........................] - ETA: 8s - loss: 5314.8784 2/10 [=====>........................] - ETA: 7s - loss: 5313.9028 3/10 [========>.....................] - ETA: 6s - loss: 5312.9111 4/10 [===========>..................] - ETA: 5s - loss: 5311.9229 5/10 [==============>...............] - ETA: 4s - loss: 5310.9307 6/10 [=================>............] - ETA: 3s - loss: 5309.9380 7/10 [====================>.........] - ETA: 2s - loss: 5308.9434 8/10 [=======================>......] - ETA: 1s - loss: 5307.9629 9/10 [==========================>...] - ETA: 0s - loss: 5306.987810/10 [==============================] - ETA: 0s - loss: 5306.016110/10 [==============================] - 10s 1s/step - loss: 5306.0161 - val_loss: 5302.1650
+Epoch 3/10
+ 1/10 [==>...........................] - ETA: 8s - loss: 5295.4360 2/10 [=====>........................] - ETA: 7s - loss: 5294.4419 3/10 [========>.....................] - ETA: 6s - loss: 5293.4512 4/10 [===========>..................] - ETA: 5s - loss: 5292.4800[codecarbon INFO @ 17:18:51] Energy consumed for RAM : 0.000769 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 17:18:51] Energy consumed for all CPUs : 0.005416 kWh. Total CPU Power : 700.388087035267 W
+[codecarbon INFO @ 17:18:51] 0.006185 kWh of electricity used since the beginning.
+ 5/10 [==============>...............] - ETA: 4s - loss: 5291.5190 6/10 [=================>............] - ETA: 3s - loss: 5290.5654 7/10 [====================>.........] - ETA: 2s - loss: 5289.6113 8/10 [=======================>......] - ETA: 1s - loss: 5288.6582 9/10 [==========================>...] - ETA: 0s - loss: 5287.699210/10 [==============================] - ETA: 0s - loss: 5286.752010/10 [==============================] - 10s 1s/step - loss: 5286.7520 - val_loss: 5277.2573
+Epoch 4/10
+ 1/10 [==>...........................] - ETA: 8s - loss: 5276.2773 2/10 [=====>........................] - ETA: 7s - loss: 5275.2969 3/10 [========>.....................] - ETA: 6s - loss: 5274.3589 4/10 [===========>..................] - ETA: 6s - loss: 5273.4170 5/10 [==============>...............] - ETA: 5s - loss: 5272.4761 6/10 [=================>............] - ETA: 4s - loss: 5271.5273 7/10 [====================>.........] - ETA: 3s - loss: 5270.5801 8/10 [=======================>......] - ETA: 2s - loss: 5269.6313 9/10 [==========================>...] - ETA: 1s - loss: 5268.6782[codecarbon INFO @ 17:19:06] Energy consumed for RAM : 0.001154 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 17:19:06] Energy consumed for all CPUs : 0.008321 kWh. Total CPU Power : 696.8723072729249 W
+[codecarbon INFO @ 17:19:06] 0.009475 kWh of electricity used since the beginning.
+10/10 [==============================] - ETA: 0s - loss: 5267.726610/10 [==============================] - 11s 1s/step - loss: 5267.7266 - val_loss: 5257.0967
+Epoch 5/10
+ 1/10 [==>...........................] - ETA: 9s - loss: 5257.3203 2/10 [=====>........................] - ETA: 8s - loss: 5256.3633 3/10 [========>.....................] - ETA: 7s - loss: 5255.4033 4/10 [===========>..................] - ETA: 6s - loss: 5254.4521 5/10 [==============>...............] - ETA: 5s - loss: 5253.5078 6/10 [=================>............] - ETA: 4s - loss: 5252.5645 7/10 [====================>.........] - ETA: 3s - loss: 5251.6128 8/10 [=======================>......] - ETA: 2s - loss: 5250.6660 9/10 [==========================>...] - ETA: 1s - loss: 5249.714810/10 [==============================] - ETA: 0s - loss: 5248.767610/10 [==============================] - 11s 1s/step - loss: 5248.7676 - val_loss: 5237.5830
+Epoch 6/10
+ 1/10 [==>...........................] - ETA: 9s - loss: 5238.3081 2/10 [=====>........................] - ETA: 7s - loss: 5237.3599[codecarbon INFO @ 17:19:21] Energy consumed for RAM : 0.001539 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 17:19:21] Energy consumed for all CPUs : 0.011230 kWh. Total CPU Power : 697.1927432946713 W
+[codecarbon INFO @ 17:19:21] 0.012769 kWh of electricity used since the beginning.
+ 3/10 [========>.....................] - ETA: 7s - loss: 5236.4116 4/10 [===========>..................] - ETA: 6s - loss: 5235.4497 5/10 [==============>...............] - ETA: 5s - loss: 5234.5083 6/10 [=================>............] - ETA: 4s - loss: 5233.5581 7/10 [====================>.........] - ETA: 3s - loss: 5232.6050 8/10 [=======================>......] - ETA: 2s - loss: 5231.6538 9/10 [==========================>...] - ETA: 1s - loss: 5230.695310/10 [==============================] - ETA: 0s - loss: 5229.749010/10 [==============================] - 11s 1s/step - loss: 5229.7490 - val_loss: 5218.2065
+Epoch 7/10
+ 1/10 [==>...........................] - ETA: 8s - loss: 5219.2539 2/10 [=====>........................] - ETA: 8s - loss: 5218.2988 3/10 [========>.....................] - ETA: 7s - loss: 5217.3457 4/10 [===========>..................] - ETA: 6s - loss: 5216.4028 5/10 [==============>...............] - ETA: 5s - loss: 5215.4458 6/10 [=================>............] - ETA: 4s - loss: 5214.4873[codecarbon INFO @ 17:19:36] Energy consumed for RAM : 0.001923 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 17:19:36] Energy consumed for all CPUs : 0.014134 kWh. Total CPU Power : 697.6180532477028 W
+[codecarbon INFO @ 17:19:36] 0.016057 kWh of electricity used since the beginning.
+ 7/10 [====================>.........] - ETA: 3s - loss: 5213.5298 8/10 [=======================>......] - ETA: 2s - loss: 5212.5718 9/10 [==========================>...] - ETA: 1s - loss: 5211.617710/10 [==============================] - ETA: 0s - loss: 5210.659710/10 [==============================] - 11s 1s/step - loss: 5210.6597 - val_loss: 5198.8809
+Epoch 8/10
+ 1/10 [==>...........................] - ETA: 8s - loss: 5200.1050 2/10 [=====>........................] - ETA: 7s - loss: 5199.1548 3/10 [========>.....................] - ETA: 6s - loss: 5198.2090 4/10 [===========>..................] - ETA: 6s - loss: 5197.2607 5/10 [==============>...............] - ETA: 5s - loss: 5196.2974 6/10 [=================>............] - ETA: 4s - loss: 5195.3359 7/10 [====================>.........] - ETA: 3s - loss: 5194.3760 8/10 [=======================>......] - ETA: 2s - loss: 5193.4150 9/10 [==========================>...] - ETA: 1s - loss: 5192.453610/10 [==============================] - ETA: 0s - loss: 5191.4932[codecarbon INFO @ 17:19:51] Energy consumed for RAM : 0.002307 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 17:19:51] Energy consumed for all CPUs : 0.017032 kWh. Total CPU Power : 695.3312194270753 W
+[codecarbon INFO @ 17:19:51] 0.019339 kWh of electricity used since the beginning.
+10/10 [==============================] - 11s 1s/step - loss: 5191.4932 - val_loss: 5179.5664
+Epoch 9/10
+ 1/10 [==>...........................] - ETA: 8s - loss: 5180.9360 2/10 [=====>........................] - ETA: 7s - loss: 5179.9761 3/10 [========>.....................] - ETA: 6s - loss: 5179.0127 4/10 [===========>..................] - ETA: 6s - loss: 5178.0479 5/10 [==============>...............] - ETA: 5s - loss: 5177.0806 6/10 [=================>............] - ETA: 4s - loss: 5176.1182 7/10 [====================>.........] - ETA: 3s - loss: 5175.1611 8/10 [=======================>......] - ETA: 2s - loss: 5174.1968 9/10 [==========================>...] - ETA: 1s - loss: 5173.235410/10 [==============================] - ETA: 0s - loss: 5172.271010/10 [==============================] - 11s 1s/step - loss: 5172.2710 - val_loss: 5160.2632
+Epoch 10/10
+ 1/10 [==>...........................] - ETA: 8s - loss: 5161.6753 2/10 [=====>........................] - ETA: 7s - loss: 5160.6919 3/10 [========>.....................] - ETA: 6s - loss: 5159.7251 4/10 [===========>..................] - ETA: 5s - loss: 5158.7607[codecarbon INFO @ 17:20:06] Energy consumed for RAM : 0.002692 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 17:20:06] Energy consumed for all CPUs : 0.019943 kWh. Total CPU Power : 698.370778721266 W
+[codecarbon INFO @ 17:20:06] 0.022635 kWh of electricity used since the beginning.
+ 5/10 [==============>...............] - ETA: 4s - loss: 5157.7910 6/10 [=================>............] - ETA: 3s - loss: 5156.8262 7/10 [====================>.........] - ETA: 2s - loss: 5155.8628 8/10 [=======================>......] - ETA: 1s - loss: 5154.8960 9/10 [==========================>...] - ETA: 0s - loss: 5153.930710/10 [==============================] - ETA: 0s - loss: 5152.963910/10 [==============================] - 10s 1s/step - loss: 5152.9639 - val_loss: 5140.9536
+[codecarbon INFO @ 17:20:12] Energy consumed for RAM : 0.002849 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 17:20:12] Energy consumed for all CPUs : 0.021118 kWh. Total CPU Power : 692.7455324662868 W
+[codecarbon INFO @ 17:20:12] 0.023966 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 17:20:12] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 17:20:12] Regional emissions retrieval failed. Falling back on country emissions.
+[codecarbon INFO @ 17:20:12] 0.079363 g.CO2eq/s mean an estimation of 2,502.7933466006516 kg.CO2eq/year
+[codecarbon ERROR @ 17:20:12] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 17:20:12] Regional emissions retrieval failed. Falling back on country emissions.
+/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/output_methods/file.py:53: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  df = pd.concat([df, pd.DataFrame.from_records([dict(total.values)])])
+/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/tensorflow_probability/python/layers/util.py:98: UserWarning: `layer.add_variable` is deprecated and will be removed in a future version. Please use the `layer.add_weight()` method instead.
+  loc = add_variable_fn(
+/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/tensorflow_probability/python/layers/util.py:108: UserWarning: `layer.add_variable` is deprecated and will be removed in a future version. Please use the `layer.add_weight()` method instead.
+  untransformed_scale = add_variable_fn(
+/home/ttahmid/applications_test/tf-melt/tfmelt/models.py:574: UserWarning: Loss function is overridden when using aleatoric uncertainty. Using the negative log likelihood loss function.
+  warnings.warn(
+Training took 111.160 seconds
+Training model with BF16
+Enabling Mixed Precision (mixed_bfloat16) with AMX
+Model: "bayesian_neural_network"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_dropout (Dropout)     multiple                  0         
+                                                                 
+ output (BayesianAleatoricO  multiple                  40980     
+ utput)                                                          
+                                                                 
+ bayesian_block_0 (Bayesian  multiple                  168297120 
+ Block)                                                          
+                                                                 
+=================================================================
+Total params: 168338100 (642.16 MB)
+Trainable params: 168296052 (642.00 MB)
+Non-trainable params: 42048 (164.25 KB)
+_________________________________________________________________
+Model: "output"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ pre_aleatoric (DenseFlipou  multiple                  40980     
+ t)                                                              
+                                                                 
+ distribution_output (Distr  multiple                  0         
+ ibutionLambda)                                                  
+                                                                 
+=================================================================
+Total params: 40980 (160.08 KB)
+Trainable params: 40980 (160.08 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Model: "bayesian_block_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ activation_0 (Activation)   multiple                  0         
+                                                                 
+ activation_1 (Activation)   multiple                  0         
+                                                                 
+ activation_2 (Activation)   multiple                  0         
+                                                                 
+ activation_3 (Activation)   multiple                  0         
+                                                                 
+ activation_4 (Activation)   multiple                  0         
+                                                                 
+ activation_5 (Activation)   multiple                  0         
+                                                                 
+ dropout_0 (Dropout)         multiple                  0         
+                                                                 
+ dropout_1 (Dropout)         multiple                  0         
+                                                                 
+ dropout_2 (Dropout)         multiple                  0         
+                                                                 
+ dropout_3 (Dropout)         multiple                  0         
+                                                                 
+ dropout_4 (Dropout)         multiple                  0         
+                                                                 
+ dropout_5 (Dropout)         multiple                  0         
+                                                                 
+ batch_norm_0 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_1 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_2 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_3 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_4 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_5 (BatchNormali  multiple                  4096      
+ zation)                                                         
+                                                                 
+ bayesian_0 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_1 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_2 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_3 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_4 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_5 (DenseFlipout)   multiple                  8193024   
+                                                                 
+=================================================================
+Total params: 168297120 (642.00 MB)
+Trainable params: 168255072 (641.84 MB)
+Non-trainable params: 42048 (164.25 KB)
+_________________________________________________________________
+Model: "output"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ pre_aleatoric (DenseFlipou  multiple                  40980     
+ t)                                                              
+                                                                 
+ distribution_output (Distr  multiple                  0         
+ ibutionLambda)                                                  
+                                                                 
+=================================================================
+Total params: 40980 (160.08 KB)
+Trainable params: 40980 (160.08 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Model: "bayesian_block_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ activation_0 (Activation)   multiple                  0         
+                                                                 
+ activation_1 (Activation)   multiple                  0         
+                                                                 
+ activation_2 (Activation)   multiple                  0         
+                                                                 
+ activation_3 (Activation)   multiple                  0         
+                                                                 
+ activation_4 (Activation)   multiple                  0         
+                                                                 
+ activation_5 (Activation)   multiple                  0         
+                                                                 
+ dropout_0 (Dropout)         multiple                  0         
+                                                                 
+ dropout_1 (Dropout)         multiple                  0         
+                                                                 
+ dropout_2 (Dropout)         multiple                  0         
+                                                                 
+ dropout_3 (Dropout)         multiple                  0         
+                                                                 
+ dropout_4 (Dropout)         multiple                  0         
+                                                                 
+ dropout_5 (Dropout)         multiple                  0         
+                                                                 
+ batch_norm_0 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_1 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_2 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_3 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_4 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_5 (BatchNormali  multiple                  4096      
+ zation)                                                         
+                                                                 
+ bayesian_0 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_1 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_2 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_3 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_4 (DenseFlipout)   multiple                  32004000  
+                                                                 
+ bayesian_5 (DenseFlipout)   multiple                  8193024   
+                                                                 
+=================================================================
+Total params: 168297120 (642.00 MB)
+Trainable params: 168255072 (641.84 MB)
+Non-trainable params: 42048 (164.25 KB)
+_________________________________________________________________
+[codecarbon INFO @ 17:20:18] [setup] RAM Tracking...
+[codecarbon INFO @ 17:20:18] [setup] GPU Tracking...
+[codecarbon INFO @ 17:20:18] No GPU found.
+[codecarbon INFO @ 17:20:18] [setup] CPU Tracking...
+[codecarbon INFO @ 17:20:18] Tracking Intel CPU via RAPL interface
+[codecarbon INFO @ 17:20:18] >>> Tracker's metadata:
+[codecarbon INFO @ 17:20:18]   Platform system: Linux-4.18.0-477.10.1.el8_8.x86_64-x86_64-with-glibc2.28
+[codecarbon INFO @ 17:20:18]   Python version: 3.11.9
+[codecarbon INFO @ 17:20:18]   CodeCarbon version: 2.5.0
+[codecarbon INFO @ 17:20:18]   Available RAM : 246.064 GB
+[codecarbon INFO @ 17:20:18]   CPU count: 104
+[codecarbon INFO @ 17:20:18]   CPU model: Intel(R) Xeon(R) Platinum 8470QL
+[codecarbon INFO @ 17:20:18]   GPU count: None
+[codecarbon INFO @ 17:20:18]   GPU model: None
+[codecarbon INFO @ 17:20:22] Saving emissions data to file /home/ttahmid/applications_test/tf-melt/examples/emissions.csv
+Epoch 1/10
+2024-07-22 17:20:25.302582: I tensorflow/core/grappler/optimizers/auto_mixed_precision.cc:2254] Converted 183/2560 nodes to bfloat16 precision using 56 cast(s) to bfloat16 (excluding Const and Variable casts)
+ 1/10 [==>...........................] - ETA: 36s - loss: 5338.1357 2/10 [=====>........................] - ETA: 5s - loss: 5336.6509  3/10 [========>.....................] - ETA: 4s - loss: 5335.2974 4/10 [===========>..................] - ETA: 4s - loss: 5334.0156 5/10 [==============>...............] - ETA: 3s - loss: 5332.8394 6/10 [=================>............] - ETA: 2s - loss: 5331.7041 7/10 [====================>.........] - ETA: 2s - loss: 5330.6011 8/10 [=======================>......] - ETA: 1s - loss: 5329.5308 9/10 [==========================>...] - ETA: 0s - loss: 5328.473110/10 [==============================] - ETA: 0s - loss: 5327.41602024-07-22 17:20:33.744478: I tensorflow/core/grappler/optimizers/auto_mixed_precision.cc:2254] Converted 115/599 nodes to bfloat16 precision using 21 cast(s) to bfloat16 (excluding Const and Variable casts)
+10/10 [==============================] - 11s 826ms/step - loss: 5327.4160 - val_loss: 312348704.0000
+Epoch 2/10
+ 1/10 [==>...........................] - ETA: 6s - loss: 5316.0547 2/10 [=====>........................] - ETA: 5s - loss: 5315.0098 3/10 [========>.....................] - ETA: 4s - loss: 5314.0054[codecarbon INFO @ 17:20:37] Energy consumed for RAM : 0.000385 kWh. RAM Power : 92.27400000000002 W
+ 4/10 [===========>..................] - ETA: 4s - loss: 5313.0283[codecarbon INFO @ 17:20:37] Energy consumed for all CPUs : 0.002503 kWh. Total CPU Power : 600.4976174092009 W
+[codecarbon INFO @ 17:20:37] 0.002887 kWh of electricity used since the beginning.
+ 5/10 [==============>...............] - ETA: 3s - loss: 5312.0288 6/10 [=================>............] - ETA: 2s - loss: 5311.0562 7/10 [====================>.........] - ETA: 2s - loss: 5310.1016 8/10 [=======================>......] - ETA: 1s - loss: 5309.1294 9/10 [==========================>...] - ETA: 0s - loss: 5308.169910/10 [==============================] - ETA: 0s - loss: 5307.218810/10 [==============================] - 8s 776ms/step - loss: 5307.2188 - val_loss: 5303.7114
+Epoch 3/10
+ 1/10 [==>...........................] - ETA: 6s - loss: 5296.7666 2/10 [=====>........................] - ETA: 5s - loss: 5295.8218 3/10 [========>.....................] - ETA: 5s - loss: 5294.8359 4/10 [===========>..................] - ETA: 4s - loss: 5293.8989 5/10 [==============>...............] - ETA: 3s - loss: 5292.9570 6/10 [=================>............] - ETA: 2s - loss: 5292.0020 7/10 [====================>.........] - ETA: 2s - loss: 5291.0469 8/10 [=======================>......] - ETA: 1s - loss: 5290.0933 9/10 [==========================>...] - ETA: 0s - loss: 5289.140110/10 [==============================] - ETA: 0s - loss: 5288.198710/10 [==============================] - 8s 770ms/step - loss: 5288.1987 - val_loss: 5278.8447
+Epoch 4/10
+ 1/10 [==>...........................] - ETA: 6s - loss: 5277.7456 2/10 [=====>........................] - ETA: 6s - loss: 5276.8364 3/10 [========>.....................] - ETA: 5s - loss: 5275.9053[codecarbon INFO @ 17:20:52] Energy consumed for RAM : 0.000769 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 17:20:52] Energy consumed for all CPUs : 0.005388 kWh. Total CPU Power : 692.5747172695353 W
+[codecarbon INFO @ 17:20:52] 0.006157 kWh of electricity used since the beginning.
+ 4/10 [===========>..................] - ETA: 4s - loss: 5274.9800 5/10 [==============>...............] - ETA: 3s - loss: 5274.0586 6/10 [=================>............] - ETA: 2s - loss: 5273.1235 7/10 [====================>.........] - ETA: 2s - loss: 5272.1851 8/10 [=======================>......] - ETA: 1s - loss: 5271.2490 9/10 [==========================>...] - ETA: 0s - loss: 5270.311510/10 [==============================] - ETA: 0s - loss: 5269.373510/10 [==============================] - 8s 767ms/step - loss: 5269.3735 - val_loss: 5258.9150
+Epoch 5/10
+ 1/10 [==>...........................] - ETA: 6s - loss: 5259.0732 2/10 [=====>........................] - ETA: 6s - loss: 5258.1484 3/10 [========>.....................] - ETA: 5s - loss: 5257.2109 4/10 [===========>..................] - ETA: 4s - loss: 5256.2661 5/10 [==============>...............] - ETA: 3s - loss: 5255.3306 6/10 [=================>............] - ETA: 2s - loss: 5254.3862 7/10 [====================>.........] - ETA: 2s - loss: 5253.4468 8/10 [=======================>......] - ETA: 1s - loss: 5252.5137 9/10 [==========================>...] - ETA: 0s - loss: 5251.571810/10 [==============================] - ETA: 0s - loss: 5250.639210/10 [==============================] - 8s 762ms/step - loss: 5250.6392 - val_loss: 5239.4966
+Epoch 6/10
+ 1/10 [==>...........................] - ETA: 6s - loss: 5240.3037 2/10 [=====>........................] - ETA: 5s - loss: 5239.3662 3/10 [========>.....................] - ETA: 4s - loss: 5238.4219[codecarbon INFO @ 17:21:07] Energy consumed for RAM : 0.001154 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 17:21:07] Energy consumed for all CPUs : 0.008284 kWh. Total CPU Power : 694.4539511770131 W
+[codecarbon INFO @ 17:21:07] 0.009438 kWh of electricity used since the beginning.
+ 4/10 [===========>..................] - ETA: 4s - loss: 5237.4761 5/10 [==============>...............] - ETA: 3s - loss: 5236.5415 6/10 [=================>............] - ETA: 2s - loss: 5235.5986 7/10 [====================>.........] - ETA: 2s - loss: 5234.6582 8/10 [=======================>......] - ETA: 1s - loss: 5233.7192 9/10 [==========================>...] - ETA: 0s - loss: 5232.771510/10 [==============================] - ETA: 0s - loss: 5231.827610/10 [==============================] - 7s 746ms/step - loss: 5231.8276 - val_loss: 5220.2998
+Epoch 7/10
+ 1/10 [==>...........................] - ETA: 6s - loss: 5221.4458 2/10 [=====>........................] - ETA: 5s - loss: 5220.4951 3/10 [========>.....................] - ETA: 4s - loss: 5219.5596 4/10 [===========>..................] - ETA: 4s - loss: 5218.6162 5/10 [==============>...............] - ETA: 3s - loss: 5217.6729 6/10 [=================>............] - ETA: 2s - loss: 5216.7212 7/10 [====================>.........] - ETA: 2s - loss: 5215.7720 8/10 [=======================>......] - ETA: 1s - loss: 5214.8291 9/10 [==========================>...] - ETA: 0s - loss: 5213.883810/10 [==============================] - ETA: 0s - loss: 5212.939010/10 [==============================] - 7s 746ms/step - loss: 5212.9390 - val_loss: 5201.1416
+Epoch 8/10
+ 1/10 [==>...........................] - ETA: 6s - loss: 5202.5347 2/10 [=====>........................] - ETA: 5s - loss: 5201.5596 3/10 [========>.....................] - ETA: 4s - loss: 5200.6089[codecarbon INFO @ 17:21:22] Energy consumed for RAM : 0.001538 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 17:21:22] Energy consumed for all CPUs : 0.011173 kWh. Total CPU Power : 692.8170889444011 W
+[codecarbon INFO @ 17:21:22] 0.012712 kWh of electricity used since the beginning.
+ 4/10 [===========>..................] - ETA: 4s - loss: 5199.6631 5/10 [==============>...............] - ETA: 3s - loss: 5198.7070 6/10 [=================>............] - ETA: 2s - loss: 5197.7505 7/10 [====================>.........] - ETA: 2s - loss: 5196.7964 8/10 [=======================>......] - ETA: 1s - loss: 5195.8472 9/10 [==========================>...] - ETA: 0s - loss: 5194.892610/10 [==============================] - ETA: 0s - loss: 5193.942410/10 [==============================] - 7s 724ms/step - loss: 5193.9424 - val_loss: 5182.0352
+Epoch 9/10
+ 1/10 [==>...........................] - ETA: 6s - loss: 5183.4922 2/10 [=====>........................] - ETA: 5s - loss: 5182.5376 3/10 [========>.....................] - ETA: 4s - loss: 5181.5752 4/10 [===========>..................] - ETA: 4s - loss: 5180.6157 5/10 [==============>...............] - ETA: 3s - loss: 5179.6577 6/10 [=================>............] - ETA: 2s - loss: 5178.7061 7/10 [====================>.........] - ETA: 2s - loss: 5177.7544 8/10 [=======================>......] - ETA: 1s - loss: 5176.7998 9/10 [==========================>...] - ETA: 0s - loss: 5175.847710/10 [==============================] - ETA: 0s - loss: 5174.890610/10 [==============================] - 7s 727ms/step - loss: 5174.8906 - val_loss: 5162.9131
+Epoch 10/10
+ 1/10 [==>...........................] - ETA: 6s - loss: 5164.3589 2/10 [=====>........................] - ETA: 5s - loss: 5163.4175 3/10 [========>.....................] - ETA: 4s - loss: 5162.4624 4/10 [===========>..................] - ETA: 4s - loss: 5161.5098[codecarbon INFO @ 17:21:37] Energy consumed for RAM : 0.001923 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 17:21:37] Energy consumed for all CPUs : 0.014067 kWh. Total CPU Power : 694.5198044618148 W
+[codecarbon INFO @ 17:21:37] 0.015990 kWh of electricity used since the beginning.
+ 5/10 [==============>...............] - ETA: 3s - loss: 5160.5518 6/10 [=================>............] - ETA: 2s - loss: 5159.5913 7/10 [====================>.........] - ETA: 2s - loss: 5158.6348 8/10 [=======================>......] - ETA: 1s - loss: 5157.6738 9/10 [==========================>...] - ETA: 0s - loss: 5156.715310/10 [==============================] - ETA: 0s - loss: 5155.755410/10 [==============================] - 7s 727ms/step - loss: 5155.7554 - val_loss: 5143.7490
+[codecarbon INFO @ 17:21:41] Energy consumed for RAM : 0.002030 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 17:21:41] Energy consumed for all CPUs : 0.014865 kWh. Total CPU Power : 690.3160552573297 W
+[codecarbon INFO @ 17:21:41] 0.016895 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 17:21:41] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 17:21:41] Regional emissions retrieval failed. Falling back on country emissions.
+/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/output_methods/file.py:53: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  df = pd.concat([df, pd.DataFrame.from_records([dict(total.values)])])
+Training took 79.193 seconds
+BNN Training Summary on CPU
+FP32 training time: 111.160 seconds with loss: 5152.9638671875
+BF16 training time: 79.193 seconds with loss: 5155.75537109375
+FP32 total consumed energy: 0.02397 J with emissions: 0.00882 kgCO2
+BF16 total consumed energy: 0.01689 J with emissions: 0.00622 kgCO2
+FP32 EDP (Energy Delay Product): 2.664 J*s
+BF16 EDP (Energy Delay Product): 1.338 J*s
+BF16 is 1.40X faster than FP32 with -0.00% accuracy loss
+BF16 reduces emissions by 29.51% and EDP by 49.78% than FP32
+[CODE_SAMPLE_COMPLETED_SUCCESFULLY]
+Job Done!
