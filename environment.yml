@@ -16,6 +16,7 @@ dependencies:
       - torchinfo
       - matplotlib
       - scikit-learn
+      - pandas
       # - jupyter_contrib_nbextensions
       - black
       - isort
