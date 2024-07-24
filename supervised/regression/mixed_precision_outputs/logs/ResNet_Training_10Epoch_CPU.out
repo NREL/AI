@@ -1,0 +1,1900 @@
+Activating Intel modules.
+2024-07-22 13:00:10.259932: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-22 13:00:10.547386: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-22 13:00:10.547837: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-22 13:00:10.589935: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-22 13:00:10.697903: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-22 13:00:12.471517: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Intel CPU detected. AMX is enabled
+Shape of x: (50000, 4000), Shape of y: (50000, 10)
+Training resnet model with FP32
+Model: "residual_neural_network"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_dropout (Dropout)     multiple                  0         
+                                                                 
+ output (DefaultOutput)      multiple                  40010     
+                                                                 
+ residual_block (ResidualBl  multiple                  801000000 
+ ock)                                                            
+                                                                 
+=================================================================
+Total params: 801040010 (2.98 GB)
+Trainable params: 800640010 (2.98 GB)
+Non-trainable params: 400000 (1.53 MB)
+_________________________________________________________________
+Model: "output"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ output (Dense)              multiple                  40010     
+                                                                 
+=================================================================
+Total params: 40010 (156.29 KB)
+Trainable params: 40010 (156.29 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Model: "residual_block"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ activation_0 (Activation)   multiple                  0         
+                                                                 
+ activation_1 (Activation)   multiple                  0         
+                                                                 
+ activation_2 (Activation)   multiple                  0         
+                                                                 
+ activation_3 (Activation)   multiple                  0         
+                                                                 
+ activation_4 (Activation)   multiple                  0         
+                                                                 
+ activation_5 (Activation)   multiple                  0         
+                                                                 
+ activation_6 (Activation)   multiple                  0         
+                                                                 
+ activation_7 (Activation)   multiple                  0         
+                                                                 
+ activation_8 (Activation)   multiple                  0         
+                                                                 
+ activation_9 (Activation)   multiple                  0         
+                                                                 
+ activation_10 (Activation)  multiple                  0         
+                                                                 
+ activation_11 (Activation)  multiple                  0         
+                                                                 
+ activation_12 (Activation)  multiple                  0         
+                                                                 
+ activation_13 (Activation)  multiple                  0         
+                                                                 
+ activation_14 (Activation)  multiple                  0         
+                                                                 
+ activation_15 (Activation)  multiple                  0         
+                                                                 
+ activation_16 (Activation)  multiple                  0         
+                                                                 
+ activation_17 (Activation)  multiple                  0         
+                                                                 
+ activation_18 (Activation)  multiple                  0         
+                                                                 
+ activation_19 (Activation)  multiple                  0         
+                                                                 
+ activation_20 (Activation)  multiple                  0         
+                                                                 
+ activation_21 (Activation)  multiple                  0         
+                                                                 
+ activation_22 (Activation)  multiple                  0         
+                                                                 
+ activation_23 (Activation)  multiple                  0         
+                                                                 
+ activation_24 (Activation)  multiple                  0         
+                                                                 
+ activation_25 (Activation)  multiple                  0         
+                                                                 
+ activation_26 (Activation)  multiple                  0         
+                                                                 
+ activation_27 (Activation)  multiple                  0         
+                                                                 
+ activation_28 (Activation)  multiple                  0         
+                                                                 
+ activation_29 (Activation)  multiple                  0         
+                                                                 
+ activation_30 (Activation)  multiple                  0         
+                                                                 
+ activation_31 (Activation)  multiple                  0         
+                                                                 
+ activation_32 (Activation)  multiple                  0         
+                                                                 
+ activation_33 (Activation)  multiple                  0         
+                                                                 
+ activation_34 (Activation)  multiple                  0         
+                                                                 
+ activation_35 (Activation)  multiple                  0         
+                                                                 
+ activation_36 (Activation)  multiple                  0         
+                                                                 
+ activation_37 (Activation)  multiple                  0         
+                                                                 
+ activation_38 (Activation)  multiple                  0         
+                                                                 
+ activation_39 (Activation)  multiple                  0         
+                                                                 
+ activation_40 (Activation)  multiple                  0         
+                                                                 
+ activation_41 (Activation)  multiple                  0         
+                                                                 
+ activation_42 (Activation)  multiple                  0         
+                                                                 
+ activation_43 (Activation)  multiple                  0         
+                                                                 
+ activation_44 (Activation)  multiple                  0         
+                                                                 
+ activation_45 (Activation)  multiple                  0         
+                                                                 
+ activation_46 (Activation)  multiple                  0         
+                                                                 
+ activation_47 (Activation)  multiple                  0         
+                                                                 
+ activation_48 (Activation)  multiple                  0         
+                                                                 
+ activation_49 (Activation)  multiple                  0         
+                                                                 
+ dropout_0 (Dropout)         multiple                  0         
+                                                                 
+ dropout_1 (Dropout)         multiple                  0         
+                                                                 
+ dropout_2 (Dropout)         multiple                  0         
+                                                                 
+ dropout_3 (Dropout)         multiple                  0         
+                                                                 
+ dropout_4 (Dropout)         multiple                  0         
+                                                                 
+ dropout_5 (Dropout)         multiple                  0         
+                                                                 
+ dropout_6 (Dropout)         multiple                  0         
+                                                                 
+ dropout_7 (Dropout)         multiple                  0         
+                                                                 
+ dropout_8 (Dropout)         multiple                  0         
+                                                                 
+ dropout_9 (Dropout)         multiple                  0         
+                                                                 
+ dropout_10 (Dropout)        multiple                  0         
+                                                                 
+ dropout_11 (Dropout)        multiple                  0         
+                                                                 
+ dropout_12 (Dropout)        multiple                  0         
+                                                                 
+ dropout_13 (Dropout)        multiple                  0         
+                                                                 
+ dropout_14 (Dropout)        multiple                  0         
+                                                                 
+ dropout_15 (Dropout)        multiple                  0         
+                                                                 
+ dropout_16 (Dropout)        multiple                  0         
+                                                                 
+ dropout_17 (Dropout)        multiple                  0         
+                                                                 
+ dropout_18 (Dropout)        multiple                  0         
+                                                                 
+ dropout_19 (Dropout)        multiple                  0         
+                                                                 
+ dropout_20 (Dropout)        multiple                  0         
+                                                                 
+ dropout_21 (Dropout)        multiple                  0         
+                                                                 
+ dropout_22 (Dropout)        multiple                  0         
+                                                                 
+ dropout_23 (Dropout)        multiple                  0         
+                                                                 
+ dropout_24 (Dropout)        multiple                  0         
+                                                                 
+ dropout_25 (Dropout)        multiple                  0         
+                                                                 
+ dropout_26 (Dropout)        multiple                  0         
+                                                                 
+ dropout_27 (Dropout)        multiple                  0         
+                                                                 
+ dropout_28 (Dropout)        multiple                  0         
+                                                                 
+ dropout_29 (Dropout)        multiple                  0         
+                                                                 
+ dropout_30 (Dropout)        multiple                  0         
+                                                                 
+ dropout_31 (Dropout)        multiple                  0         
+                                                                 
+ dropout_32 (Dropout)        multiple                  0         
+                                                                 
+ dropout_33 (Dropout)        multiple                  0         
+                                                                 
+ dropout_34 (Dropout)        multiple                  0         
+                                                                 
+ dropout_35 (Dropout)        multiple                  0         
+                                                                 
+ dropout_36 (Dropout)        multiple                  0         
+                                                                 
+ dropout_37 (Dropout)        multiple                  0         
+                                                                 
+ dropout_38 (Dropout)        multiple                  0         
+                                                                 
+ dropout_39 (Dropout)        multiple                  0         
+                                                                 
+ dropout_40 (Dropout)        multiple                  0         
+                                                                 
+ dropout_41 (Dropout)        multiple                  0         
+                                                                 
+ dropout_42 (Dropout)        multiple                  0         
+                                                                 
+ dropout_43 (Dropout)        multiple                  0         
+                                                                 
+ dropout_44 (Dropout)        multiple                  0         
+                                                                 
+ dropout_45 (Dropout)        multiple                  0         
+                                                                 
+ dropout_46 (Dropout)        multiple                  0         
+                                                                 
+ dropout_47 (Dropout)        multiple                  0         
+                                                                 
+ dropout_48 (Dropout)        multiple                  0         
+                                                                 
+ dropout_49 (Dropout)        multiple                  0         
+                                                                 
+ batch_norm_0 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_1 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_2 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_3 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_4 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_5 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_6 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_7 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_8 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_9 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_10 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_11 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_12 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_13 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_14 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_15 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_16 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_17 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_18 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_19 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_20 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_21 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_22 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_23 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_24 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_25 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_26 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_27 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_28 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_29 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_30 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_31 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_32 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_33 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_34 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_35 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_36 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_37 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_38 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_39 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_40 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_41 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_42 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_43 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_44 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_45 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_46 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_47 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_48 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_49 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ dense_0 (Dense)             multiple                  16004000  
+                                                                 
+ dense_1 (Dense)             multiple                  16004000  
+                                                                 
+ dense_2 (Dense)             multiple                  16004000  
+                                                                 
+ dense_3 (Dense)             multiple                  16004000  
+                                                                 
+ dense_4 (Dense)             multiple                  16004000  
+                                                                 
+ dense_5 (Dense)             multiple                  16004000  
+                                                                 
+ dense_6 (Dense)             multiple                  16004000  
+                                                                 
+ dense_7 (Dense)             multiple                  16004000  
+                                                                 
+ dense_8 (Dense)             multiple                  16004000  
+                                                                 
+ dense_9 (Dense)             multiple                  16004000  
+                                                                 
+ dense_10 (Dense)            multiple                  16004000  
+                                                                 
+ dense_11 (Dense)            multiple                  16004000  
+                                                                 
+ dense_12 (Dense)            multiple                  16004000  
+                                                                 
+ dense_13 (Dense)            multiple                  16004000  
+                                                                 
+ dense_14 (Dense)            multiple                  16004000  
+                                                                 
+ dense_15 (Dense)            multiple                  16004000  
+                                                                 
+ dense_16 (Dense)            multiple                  16004000  
+                                                                 
+ dense_17 (Dense)            multiple                  16004000  
+                                                                 
+ dense_18 (Dense)            multiple                  16004000  
+                                                                 
+ dense_19 (Dense)            multiple                  16004000  
+                                                                 
+ dense_20 (Dense)            multiple                  16004000  
+                                                                 
+ dense_21 (Dense)            multiple                  16004000  
+                                                                 
+ dense_22 (Dense)            multiple                  16004000  
+                                                                 
+ dense_23 (Dense)            multiple                  16004000  
+                                                                 
+ dense_24 (Dense)            multiple                  16004000  
+                                                                 
+ dense_25 (Dense)            multiple                  16004000  
+                                                                 
+ dense_26 (Dense)            multiple                  16004000  
+                                                                 
+ dense_27 (Dense)            multiple                  16004000  
+                                                                 
+ dense_28 (Dense)            multiple                  16004000  
+                                                                 
+ dense_29 (Dense)            multiple                  16004000  
+                                                                 
+ dense_30 (Dense)            multiple                  16004000  
+                                                                 
+ dense_31 (Dense)            multiple                  16004000  
+                                                                 
+ dense_32 (Dense)            multiple                  16004000  
+                                                                 
+ dense_33 (Dense)            multiple                  16004000  
+                                                                 
+ dense_34 (Dense)            multiple                  16004000  
+                                                                 
+ dense_35 (Dense)            multiple                  16004000  
+                                                                 
+ dense_36 (Dense)            multiple                  16004000  
+                                                                 
+ dense_37 (Dense)            multiple                  16004000  
+                                                                 
+ dense_38 (Dense)            multiple                  16004000  
+                                                                 
+ dense_39 (Dense)            multiple                  16004000  
+                                                                 
+ dense_40 (Dense)            multiple                  16004000  
+                                                                 
+ dense_41 (Dense)            multiple                  16004000  
+                                                                 
+ dense_42 (Dense)            multiple                  16004000  
+                                                                 
+ dense_43 (Dense)            multiple                  16004000  
+                                                                 
+ dense_44 (Dense)            multiple                  16004000  
+                                                                 
+ dense_45 (Dense)            multiple                  16004000  
+                                                                 
+ dense_46 (Dense)            multiple                  16004000  
+                                                                 
+ dense_47 (Dense)            multiple                  16004000  
+                                                                 
+ dense_48 (Dense)            multiple                  16004000  
+                                                                 
+ dense_49 (Dense)            multiple                  16004000  
+                                                                 
+ add_0 (Add)                 multiple                  0         
+                                                                 
+ add_1 (Add)                 multiple                  0         
+                                                                 
+ add_2 (Add)                 multiple                  0         
+                                                                 
+ add_3 (Add)                 multiple                  0         
+                                                                 
+ add_4 (Add)                 multiple                  0         
+                                                                 
+ add_5 (Add)                 multiple                  0         
+                                                                 
+ add_6 (Add)                 multiple                  0         
+                                                                 
+ add_7 (Add)                 multiple                  0         
+                                                                 
+ add_8 (Add)                 multiple                  0         
+                                                                 
+ add_9 (Add)                 multiple                  0         
+                                                                 
+ add_10 (Add)                multiple                  0         
+                                                                 
+ add_11 (Add)                multiple                  0         
+                                                                 
+ add_12 (Add)                multiple                  0         
+                                                                 
+ add_13 (Add)                multiple                  0         
+                                                                 
+ add_14 (Add)                multiple                  0         
+                                                                 
+ add_15 (Add)                multiple                  0         
+                                                                 
+ add_16 (Add)                multiple                  0         
+                                                                 
+ add_17 (Add)                multiple                  0         
+                                                                 
+ add_18 (Add)                multiple                  0         
+                                                                 
+ add_19 (Add)                multiple                  0         
+                                                                 
+ add_20 (Add)                multiple                  0         
+                                                                 
+ add_21 (Add)                multiple                  0         
+                                                                 
+ add_22 (Add)                multiple                  0         
+                                                                 
+ add_23 (Add)                multiple                  0         
+                                                                 
+ add_24 (Add)                multiple                  0         
+                                                                 
+=================================================================
+Total params: 801000000 (2.98 GB)
+Trainable params: 800600000 (2.98 GB)
+Non-trainable params: 400000 (1.53 MB)
+_________________________________________________________________
+[codecarbon INFO @ 13:00:29] [setup] RAM Tracking...
+[codecarbon INFO @ 13:00:29] [setup] GPU Tracking...
+[codecarbon INFO @ 13:00:29] No GPU found.
+[codecarbon INFO @ 13:00:29] [setup] CPU Tracking...
+[codecarbon INFO @ 13:00:29] Tracking Intel CPU via RAPL interface
+[codecarbon INFO @ 13:00:30] >>> Tracker's metadata:
+[codecarbon INFO @ 13:00:30]   Platform system: Linux-4.18.0-477.10.1.el8_8.x86_64-x86_64-with-glibc2.28
+[codecarbon INFO @ 13:00:30]   Python version: 3.11.9
+[codecarbon INFO @ 13:00:30]   CodeCarbon version: 2.5.0
+[codecarbon INFO @ 13:00:30]   Available RAM : 246.064 GB
+[codecarbon INFO @ 13:00:30]   CPU count: 104
+[codecarbon INFO @ 13:00:30]   CPU model: Intel(R) Xeon(R) Platinum 8470QL
+[codecarbon INFO @ 13:00:30]   GPU count: None
+[codecarbon INFO @ 13:00:30]   GPU model: None
+[codecarbon INFO @ 13:00:33] Saving emissions data to file /home/ttahmid/applications_test/tf-melt/examples/emissions.csv
+Epoch 1/10
+ 1/10 [==>...........................] - ETA: 2:04 - loss: 5.6807[codecarbon INFO @ 13:00:48] Energy consumed for RAM : 0.000385 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:00:48] Energy consumed for all CPUs : 0.001998 kWh. Total CPU Power : 479.38364763736786 W
+[codecarbon INFO @ 13:00:48] 0.002382 kWh of electricity used since the beginning.
+ 2/10 [=====>........................] - ETA: 29s - loss: 124.9898 3/10 [========>.....................] - ETA: 25s - loss: 90.7982  4/10 [===========>..................] - ETA: 22s - loss: 75.7562 5/10 [==============>...............] - ETA: 18s - loss: 63.5273[codecarbon INFO @ 13:01:03] Energy consumed for RAM : 0.000769 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:01:03] Energy consumed for all CPUs : 0.004899 kWh. Total CPU Power : 696.265582671953 W
+[codecarbon INFO @ 13:01:03] 0.005668 kWh of electricity used since the beginning.
+ 6/10 [=================>............] - ETA: 14s - loss: 54.1018 7/10 [====================>.........] - ETA: 11s - loss: 47.6692 8/10 [=======================>......] - ETA: 7s - loss: 43.5637  9/10 [==========================>...] - ETA: 3s - loss: 40.0185[codecarbon INFO @ 13:01:18] Energy consumed for RAM : 0.001154 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:01:18] Energy consumed for all CPUs : 0.007804 kWh. Total CPU Power : 697.1458139709256 W
+[codecarbon INFO @ 13:01:18] 0.008958 kWh of electricity used since the beginning.
+10/10 [==============================] - ETA: 0s - loss: 36.402310/10 [==============================] - 50s 4s/step - loss: 36.4023 - val_loss: 8648298249121394356912128.0000
+Epoch 2/10
+ 1/10 [==>...........................] - ETA: 35s - loss: 4.5475 2/10 [=====>........................] - ETA: 30s - loss: 3.8263[codecarbon INFO @ 13:01:33] Energy consumed for RAM : 0.001538 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:01:33] Energy consumed for all CPUs : 0.010637 kWh. Total CPU Power : 679.5843036634847 W
+[codecarbon INFO @ 13:01:33] 0.012175 kWh of electricity used since the beginning.
+ 3/10 [========>.....................] - ETA: 26s - loss: 3.4156 4/10 [===========>..................] - ETA: 22s - loss: 3.2530 5/10 [==============>...............] - ETA: 18s - loss: 2.9690 6/10 [=================>............] - ETA: 15s - loss: 2.7977[codecarbon INFO @ 13:01:48] Energy consumed for RAM : 0.001923 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:01:48] Energy consumed for all CPUs : 0.013533 kWh. Total CPU Power : 695.1294814230229 W
+[codecarbon INFO @ 13:01:48] 0.015456 kWh of electricity used since the beginning.
+ 7/10 [====================>.........] - ETA: 11s - loss: 2.6582 8/10 [=======================>......] - ETA: 7s - loss: 2.5444  9/10 [==========================>...] - ETA: 3s - loss: 2.441610/10 [==============================] - ETA: 0s - loss: 2.3635[codecarbon INFO @ 13:02:03] Energy consumed for RAM : 0.002307 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:02:03] Energy consumed for all CPUs : 0.016435 kWh. Total CPU Power : 696.4534072793501 W
+[codecarbon INFO @ 13:02:03] 0.018742 kWh of electricity used since the beginning.
+10/10 [==============================] - 40s 4s/step - loss: 2.3635 - val_loss: 705577872756225039400960.0000
+Epoch 3/10
+ 1/10 [==>...........................] - ETA: 34s - loss: 1.5752 2/10 [=====>........................] - ETA: 30s - loss: 1.5292 3/10 [========>.....................] - ETA: 26s - loss: 1.5249[codecarbon INFO @ 13:02:18] Energy consumed for RAM : 0.002692 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:02:18] Energy consumed for all CPUs : 0.019336 kWh. Total CPU Power : 696.0894915777283 W
+[codecarbon INFO @ 13:02:18] 0.022027 kWh of electricity used since the beginning.
+ 4/10 [===========>..................] - ETA: 22s - loss: 1.5150 5/10 [==============>...............] - ETA: 18s - loss: 1.5196 6/10 [=================>............] - ETA: 15s - loss: 1.5367 7/10 [====================>.........] - ETA: 11s - loss: 1.5398[codecarbon INFO @ 13:02:33] Energy consumed for RAM : 0.003076 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:02:33] Energy consumed for all CPUs : 0.022235 kWh. Total CPU Power : 695.5744709314458 W
+[codecarbon INFO @ 13:02:33] 0.025312 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 13:02:33] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 13:02:33] Regional emissions retrieval failed. Falling back on country emissions.
+[codecarbon INFO @ 13:02:33] 0.077626 g.CO2eq/s mean an estimation of 2,448.00058977979 kg.CO2eq/year
+ 8/10 [=======================>......] - ETA: 7s - loss: 1.5275  9/10 [==========================>...] - ETA: 3s - loss: 1.521210/10 [==============================] - ETA: 0s - loss: 1.512510/10 [==============================] - 40s 4s/step - loss: 1.5125 - val_loss: 150249864824520441856.0000
+Epoch 4/10
+ 1/10 [==>...........................] - ETA: 34s - loss: 1.4491[codecarbon INFO @ 13:02:48] Energy consumed for RAM : 0.003461 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:02:48] Energy consumed for all CPUs : 0.025127 kWh. Total CPU Power : 693.9810442669135 W
+[codecarbon INFO @ 13:02:48] 0.028588 kWh of electricity used since the beginning.
+ 2/10 [=====>........................] - ETA: 29s - loss: 1.5054 3/10 [========>.....................] - ETA: 26s - loss: 1.5314 4/10 [===========>..................] - ETA: 22s - loss: 1.5120 5/10 [==============>...............] - ETA: 19s - loss: 1.5157[codecarbon INFO @ 13:03:03] Energy consumed for RAM : 0.003845 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:03:03] Energy consumed for all CPUs : 0.028028 kWh. Total CPU Power : 696.294934462417 W
+[codecarbon INFO @ 13:03:03] 0.031873 kWh of electricity used since the beginning.
+ 6/10 [=================>............] - ETA: 15s - loss: 1.5040 7/10 [====================>.........] - ETA: 11s - loss: 1.4935 8/10 [=======================>......] - ETA: 7s - loss: 1.4754 [codecarbon INFO @ 13:03:18] Energy consumed for RAM : 0.004230 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:03:18] Energy consumed for all CPUs : 0.030930 kWh. Total CPU Power : 695.7602043239864 W
+[codecarbon INFO @ 13:03:18] 0.035159 kWh of electricity used since the beginning.
+ 9/10 [==========================>...] - ETA: 3s - loss: 1.465610/10 [==============================] - ETA: 0s - loss: 1.459410/10 [==============================] - 40s 4s/step - loss: 1.4594 - val_loss: 47838359355129856.0000
+Epoch 5/10
+ 1/10 [==>...........................] - ETA: 34s - loss: 1.4374 2/10 [=====>........................] - ETA: 30s - loss: 1.4299[codecarbon INFO @ 13:03:33] Energy consumed for RAM : 0.004615 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:03:33] Energy consumed for all CPUs : 0.033834 kWh. Total CPU Power : 696.8095275896525 W
+[codecarbon INFO @ 13:03:33] 0.038449 kWh of electricity used since the beginning.
+ 3/10 [========>.....................] - ETA: 26s - loss: 1.4031 4/10 [===========>..................] - ETA: 23s - loss: 1.4200 5/10 [==============>...............] - ETA: 19s - loss: 1.4137 6/10 [=================>............] - ETA: 15s - loss: 1.4123[codecarbon INFO @ 13:03:48] Energy consumed for RAM : 0.004999 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:03:48] Energy consumed for all CPUs : 0.036729 kWh. Total CPU Power : 694.6834901563498 W
+[codecarbon INFO @ 13:03:48] 0.041728 kWh of electricity used since the beginning.
+ 7/10 [====================>.........] - ETA: 11s - loss: 1.4182 8/10 [=======================>......] - ETA: 7s - loss: 1.4167  9/10 [==========================>...] - ETA: 3s - loss: 1.415310/10 [==============================] - ETA: 0s - loss: 1.4139[codecarbon INFO @ 13:04:03] Energy consumed for RAM : 0.005384 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:04:03] Energy consumed for all CPUs : 0.039624 kWh. Total CPU Power : 694.742200020554 W
+[codecarbon INFO @ 13:04:03] 0.045008 kWh of electricity used since the beginning.
+10/10 [==============================] - 40s 4s/step - loss: 1.4139 - val_loss: 62330813546496.0000
+Epoch 6/10
+ 1/10 [==>...........................] - ETA: 35s - loss: 1.3952 2/10 [=====>........................] - ETA: 30s - loss: 1.4068 3/10 [========>.....................] - ETA: 26s - loss: 1.4390[codecarbon INFO @ 13:04:18] Energy consumed for RAM : 0.005768 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:04:18] Energy consumed for all CPUs : 0.042525 kWh. Total CPU Power : 696.0903342683202 W
+[codecarbon INFO @ 13:04:18] 0.048293 kWh of electricity used since the beginning.
+ 4/10 [===========>..................] - ETA: 23s - loss: 1.4297 5/10 [==============>...............] - ETA: 19s - loss: 1.4128 6/10 [=================>............] - ETA: 15s - loss: 1.4181 7/10 [====================>.........] - ETA: 11s - loss: 1.4112[codecarbon INFO @ 13:04:33] Energy consumed for RAM : 0.006152 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:04:33] Energy consumed for all CPUs : 0.045422 kWh. Total CPU Power : 695.1812335281284 W
+[codecarbon INFO @ 13:04:33] 0.051574 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 13:04:33] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 13:04:33] Regional emissions retrieval failed. Falling back on country emissions.
+[codecarbon INFO @ 13:04:33] 0.080540 g.CO2eq/s mean an estimation of 2,539.8985377819427 kg.CO2eq/year
+ 8/10 [=======================>......] - ETA: 7s - loss: 1.4173  9/10 [==========================>...] - ETA: 3s - loss: 1.405310/10 [==============================] - ETA: 0s - loss: 1.408610/10 [==============================] - 41s 4s/step - loss: 1.4086 - val_loss: 124921970688.0000
+Epoch 7/10
+[codecarbon INFO @ 13:04:48] Energy consumed for RAM : 0.006537 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:04:48] Energy consumed for all CPUs : 0.048296 kWh. Total CPU Power : 689.43867861277 W
+[codecarbon INFO @ 13:04:48] 0.054833 kWh of electricity used since the beginning.
+ 1/10 [==>...........................] - ETA: 36s - loss: 1.4352 2/10 [=====>........................] - ETA: 30s - loss: 1.3912 3/10 [========>.....................] - ETA: 26s - loss: 1.3900 4/10 [===========>..................] - ETA: 22s - loss: 1.3933[codecarbon INFO @ 13:05:03] Energy consumed for RAM : 0.006922 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:05:03] Energy consumed for all CPUs : 0.051196 kWh. Total CPU Power : 695.5859714503003 W
+[codecarbon INFO @ 13:05:03] 0.058118 kWh of electricity used since the beginning.
+ 5/10 [==============>...............] - ETA: 19s - loss: 1.3956 6/10 [=================>............] - ETA: 15s - loss: 1.3981 7/10 [====================>.........] - ETA: 11s - loss: 1.3972 8/10 [=======================>......] - ETA: 7s - loss: 1.3992 [codecarbon INFO @ 13:05:18] Energy consumed for RAM : 0.007306 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:05:18] Energy consumed for all CPUs : 0.054096 kWh. Total CPU Power : 695.9857220097415 W
+[codecarbon INFO @ 13:05:18] 0.061403 kWh of electricity used since the beginning.
+ 9/10 [==========================>...] - ETA: 3s - loss: 1.402310/10 [==============================] - ETA: 0s - loss: 1.406610/10 [==============================] - 41s 4s/step - loss: 1.4066 - val_loss: 631823040.0000
+Epoch 8/10
+ 1/10 [==>...........................] - ETA: 36s - loss: 1.3620 2/10 [=====>........................] - ETA: 31s - loss: 1.3604[codecarbon INFO @ 13:05:33] Energy consumed for RAM : 0.007691 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:05:33] Energy consumed for all CPUs : 0.056982 kWh. Total CPU Power : 692.2374772987013 W
+[codecarbon INFO @ 13:05:33] 0.064673 kWh of electricity used since the beginning.
+ 3/10 [========>.....................] - ETA: 27s - loss: 1.3682 4/10 [===========>..................] - ETA: 23s - loss: 1.3836 5/10 [==============>...............] - ETA: 19s - loss: 1.4021[codecarbon INFO @ 13:05:48] Energy consumed for RAM : 0.008076 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:05:48] Energy consumed for all CPUs : 0.059879 kWh. Total CPU Power : 695.2156894607028 W
+[codecarbon INFO @ 13:05:48] 0.067955 kWh of electricity used since the beginning.
+ 6/10 [=================>............] - ETA: 16s - loss: 1.4002 7/10 [====================>.........] - ETA: 12s - loss: 1.4023 8/10 [=======================>......] - ETA: 8s - loss: 1.3903  9/10 [==========================>...] - ETA: 4s - loss: 1.3951[codecarbon INFO @ 13:06:03] Energy consumed for RAM : 0.008460 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:06:03] Energy consumed for all CPUs : 0.062778 kWh. Total CPU Power : 695.7578993018656 W
+[codecarbon INFO @ 13:06:03] 0.071237 kWh of electricity used since the beginning.
+10/10 [==============================] - ETA: 0s - loss: 1.393710/10 [==============================] - 42s 4s/step - loss: 1.3937 - val_loss: 4578971.5000
+Epoch 9/10
+ 1/10 [==>...........................] - ETA: 34s - loss: 1.4240 2/10 [=====>........................] - ETA: 33s - loss: 1.4006[codecarbon INFO @ 13:06:18] Energy consumed for RAM : 0.008844 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:06:18] Energy consumed for all CPUs : 0.065661 kWh. Total CPU Power : 691.9848889861236 W
+[codecarbon INFO @ 13:06:18] 0.074506 kWh of electricity used since the beginning.
+ 3/10 [========>.....................] - ETA: 29s - loss: 1.4293 4/10 [===========>..................] - ETA: 24s - loss: 1.4214 5/10 [==============>...............] - ETA: 20s - loss: 1.4369 6/10 [=================>............] - ETA: 16s - loss: 1.4536[codecarbon INFO @ 13:06:33] Energy consumed for RAM : 0.009229 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:06:33] Energy consumed for all CPUs : 0.068556 kWh. Total CPU Power : 694.1517419646083 W
+[codecarbon INFO @ 13:06:33] 0.077785 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 13:06:33] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 13:06:33] Regional emissions retrieval failed. Falling back on country emissions.
+[codecarbon INFO @ 13:06:33] 0.080371 g.CO2eq/s mean an estimation of 2,534.568594331399 kg.CO2eq/year
+ 7/10 [====================>.........] - ETA: 12s - loss: 1.4472 8/10 [=======================>......] - ETA: 8s - loss: 1.4366  9/10 [==========================>...] - ETA: 4s - loss: 1.433110/10 [==============================] - ETA: 0s - loss: 1.4251[codecarbon INFO @ 13:06:48] Energy consumed for RAM : 0.009614 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:06:48] Energy consumed for all CPUs : 0.071449 kWh. Total CPU Power : 694.5018584017813 W
+[codecarbon INFO @ 13:06:48] 0.081063 kWh of electricity used since the beginning.
+10/10 [==============================] - 42s 4s/step - loss: 1.4251 - val_loss: 54295.5977
+Epoch 10/10
+ 1/10 [==>...........................] - ETA: 35s - loss: 1.3907 2/10 [=====>........................] - ETA: 32s - loss: 1.4192 3/10 [========>.....................] - ETA: 28s - loss: 1.3840[codecarbon INFO @ 13:07:03] Energy consumed for RAM : 0.009998 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:07:03] Energy consumed for all CPUs : 0.074350 kWh. Total CPU Power : 695.9983829959505 W
+[codecarbon INFO @ 13:07:03] 0.084348 kWh of electricity used since the beginning.
+ 4/10 [===========>..................] - ETA: 24s - loss: 1.3803 5/10 [==============>...............] - ETA: 20s - loss: 1.3786 6/10 [=================>............] - ETA: 16s - loss: 1.3824 7/10 [====================>.........] - ETA: 12s - loss: 1.3838[codecarbon INFO @ 13:07:18] Energy consumed for RAM : 0.010383 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:07:18] Energy consumed for all CPUs : 0.077254 kWh. Total CPU Power : 696.572402871715 W
+[codecarbon INFO @ 13:07:18] 0.087637 kWh of electricity used since the beginning.
+ 8/10 [=======================>......] - ETA: 8s - loss: 1.3833  9/10 [==========================>...] - ETA: 4s - loss: 1.387610/10 [==============================] - ETA: 0s - loss: 1.380810/10 [==============================] - 42s 4s/step - loss: 1.3808 - val_loss: 512.1913
+[codecarbon INFO @ 13:07:30] Energy consumed for RAM : 0.010699 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:07:30] Energy consumed for all CPUs : 0.079618 kWh. Total CPU Power : 690.6596920686676 W
+[codecarbon INFO @ 13:07:30] 0.090317 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 13:07:30] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 13:07:30] Regional emissions retrieval failed. Falling back on country emissions.
+/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/output_methods/file.py:53: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  df = pd.concat([df, pd.DataFrame.from_records([dict(total.values)])])
+Training took 417.442 seconds
+Training resnet model with BF16
+Enabling Mixed Precision (mixed_bfloat16) with AMX
+Model: "residual_neural_network"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_dropout (Dropout)     multiple                  0         
+                                                                 
+ output (DefaultOutput)      multiple                  40010     
+                                                                 
+ residual_block (ResidualBl  multiple                  801000000 
+ ock)                                                            
+                                                                 
+=================================================================
+Total params: 801040010 (2.98 GB)
+Trainable params: 800640010 (2.98 GB)
+Non-trainable params: 400000 (1.53 MB)
+_________________________________________________________________
+Model: "output"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ output (Dense)              multiple                  40010     
+                                                                 
+=================================================================
+Total params: 40010 (156.29 KB)
+Trainable params: 40010 (156.29 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Model: "residual_block"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ activation_0 (Activation)   multiple                  0         
+                                                                 
+ activation_1 (Activation)   multiple                  0         
+                                                                 
+ activation_2 (Activation)   multiple                  0         
+                                                                 
+ activation_3 (Activation)   multiple                  0         
+                                                                 
+ activation_4 (Activation)   multiple                  0         
+                                                                 
+ activation_5 (Activation)   multiple                  0         
+                                                                 
+ activation_6 (Activation)   multiple                  0         
+                                                                 
+ activation_7 (Activation)   multiple                  0         
+                                                                 
+ activation_8 (Activation)   multiple                  0         
+                                                                 
+ activation_9 (Activation)   multiple                  0         
+                                                                 
+ activation_10 (Activation)  multiple                  0         
+                                                                 
+ activation_11 (Activation)  multiple                  0         
+                                                                 
+ activation_12 (Activation)  multiple                  0         
+                                                                 
+ activation_13 (Activation)  multiple                  0         
+                                                                 
+ activation_14 (Activation)  multiple                  0         
+                                                                 
+ activation_15 (Activation)  multiple                  0         
+                                                                 
+ activation_16 (Activation)  multiple                  0         
+                                                                 
+ activation_17 (Activation)  multiple                  0         
+                                                                 
+ activation_18 (Activation)  multiple                  0         
+                                                                 
+ activation_19 (Activation)  multiple                  0         
+                                                                 
+ activation_20 (Activation)  multiple                  0         
+                                                                 
+ activation_21 (Activation)  multiple                  0         
+                                                                 
+ activation_22 (Activation)  multiple                  0         
+                                                                 
+ activation_23 (Activation)  multiple                  0         
+                                                                 
+ activation_24 (Activation)  multiple                  0         
+                                                                 
+ activation_25 (Activation)  multiple                  0         
+                                                                 
+ activation_26 (Activation)  multiple                  0         
+                                                                 
+ activation_27 (Activation)  multiple                  0         
+                                                                 
+ activation_28 (Activation)  multiple                  0         
+                                                                 
+ activation_29 (Activation)  multiple                  0         
+                                                                 
+ activation_30 (Activation)  multiple                  0         
+                                                                 
+ activation_31 (Activation)  multiple                  0         
+                                                                 
+ activation_32 (Activation)  multiple                  0         
+                                                                 
+ activation_33 (Activation)  multiple                  0         
+                                                                 
+ activation_34 (Activation)  multiple                  0         
+                                                                 
+ activation_35 (Activation)  multiple                  0         
+                                                                 
+ activation_36 (Activation)  multiple                  0         
+                                                                 
+ activation_37 (Activation)  multiple                  0         
+                                                                 
+ activation_38 (Activation)  multiple                  0         
+                                                                 
+ activation_39 (Activation)  multiple                  0         
+                                                                 
+ activation_40 (Activation)  multiple                  0         
+                                                                 
+ activation_41 (Activation)  multiple                  0         
+                                                                 
+ activation_42 (Activation)  multiple                  0         
+                                                                 
+ activation_43 (Activation)  multiple                  0         
+                                                                 
+ activation_44 (Activation)  multiple                  0         
+                                                                 
+ activation_45 (Activation)  multiple                  0         
+                                                                 
+ activation_46 (Activation)  multiple                  0         
+                                                                 
+ activation_47 (Activation)  multiple                  0         
+                                                                 
+ activation_48 (Activation)  multiple                  0         
+                                                                 
+ activation_49 (Activation)  multiple                  0         
+                                                                 
+ dropout_0 (Dropout)         multiple                  0         
+                                                                 
+ dropout_1 (Dropout)         multiple                  0         
+                                                                 
+ dropout_2 (Dropout)         multiple                  0         
+                                                                 
+ dropout_3 (Dropout)         multiple                  0         
+                                                                 
+ dropout_4 (Dropout)         multiple                  0         
+                                                                 
+ dropout_5 (Dropout)         multiple                  0         
+                                                                 
+ dropout_6 (Dropout)         multiple                  0         
+                                                                 
+ dropout_7 (Dropout)         multiple                  0         
+                                                                 
+ dropout_8 (Dropout)         multiple                  0         
+                                                                 
+ dropout_9 (Dropout)         multiple                  0         
+                                                                 
+ dropout_10 (Dropout)        multiple                  0         
+                                                                 
+ dropout_11 (Dropout)        multiple                  0         
+                                                                 
+ dropout_12 (Dropout)        multiple                  0         
+                                                                 
+ dropout_13 (Dropout)        multiple                  0         
+                                                                 
+ dropout_14 (Dropout)        multiple                  0         
+                                                                 
+ dropout_15 (Dropout)        multiple                  0         
+                                                                 
+ dropout_16 (Dropout)        multiple                  0         
+                                                                 
+ dropout_17 (Dropout)        multiple                  0         
+                                                                 
+ dropout_18 (Dropout)        multiple                  0         
+                                                                 
+ dropout_19 (Dropout)        multiple                  0         
+                                                                 
+ dropout_20 (Dropout)        multiple                  0         
+                                                                 
+ dropout_21 (Dropout)        multiple                  0         
+                                                                 
+ dropout_22 (Dropout)        multiple                  0         
+                                                                 
+ dropout_23 (Dropout)        multiple                  0         
+                                                                 
+ dropout_24 (Dropout)        multiple                  0         
+                                                                 
+ dropout_25 (Dropout)        multiple                  0         
+                                                                 
+ dropout_26 (Dropout)        multiple                  0         
+                                                                 
+ dropout_27 (Dropout)        multiple                  0         
+                                                                 
+ dropout_28 (Dropout)        multiple                  0         
+                                                                 
+ dropout_29 (Dropout)        multiple                  0         
+                                                                 
+ dropout_30 (Dropout)        multiple                  0         
+                                                                 
+ dropout_31 (Dropout)        multiple                  0         
+                                                                 
+ dropout_32 (Dropout)        multiple                  0         
+                                                                 
+ dropout_33 (Dropout)        multiple                  0         
+                                                                 
+ dropout_34 (Dropout)        multiple                  0         
+                                                                 
+ dropout_35 (Dropout)        multiple                  0         
+                                                                 
+ dropout_36 (Dropout)        multiple                  0         
+                                                                 
+ dropout_37 (Dropout)        multiple                  0         
+                                                                 
+ dropout_38 (Dropout)        multiple                  0         
+                                                                 
+ dropout_39 (Dropout)        multiple                  0         
+                                                                 
+ dropout_40 (Dropout)        multiple                  0         
+                                                                 
+ dropout_41 (Dropout)        multiple                  0         
+                                                                 
+ dropout_42 (Dropout)        multiple                  0         
+                                                                 
+ dropout_43 (Dropout)        multiple                  0         
+                                                                 
+ dropout_44 (Dropout)        multiple                  0         
+                                                                 
+ dropout_45 (Dropout)        multiple                  0         
+                                                                 
+ dropout_46 (Dropout)        multiple                  0         
+                                                                 
+ dropout_47 (Dropout)        multiple                  0         
+                                                                 
+ dropout_48 (Dropout)        multiple                  0         
+                                                                 
+ dropout_49 (Dropout)        multiple                  0         
+                                                                 
+ batch_norm_0 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_1 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_2 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_3 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_4 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_5 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_6 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_7 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_8 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_9 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_10 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_11 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_12 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_13 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_14 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_15 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_16 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_17 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_18 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_19 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_20 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_21 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_22 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_23 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_24 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_25 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_26 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_27 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_28 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_29 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_30 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_31 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_32 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_33 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_34 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_35 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_36 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_37 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_38 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_39 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_40 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_41 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_42 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_43 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_44 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_45 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_46 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_47 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_48 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_49 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ dense_0 (Dense)             multiple                  16004000  
+                                                                 
+ dense_1 (Dense)             multiple                  16004000  
+                                                                 
+ dense_2 (Dense)             multiple                  16004000  
+                                                                 
+ dense_3 (Dense)             multiple                  16004000  
+                                                                 
+ dense_4 (Dense)             multiple                  16004000  
+                                                                 
+ dense_5 (Dense)             multiple                  16004000  
+                                                                 
+ dense_6 (Dense)             multiple                  16004000  
+                                                                 
+ dense_7 (Dense)             multiple                  16004000  
+                                                                 
+ dense_8 (Dense)             multiple                  16004000  
+                                                                 
+ dense_9 (Dense)             multiple                  16004000  
+                                                                 
+ dense_10 (Dense)            multiple                  16004000  
+                                                                 
+ dense_11 (Dense)            multiple                  16004000  
+                                                                 
+ dense_12 (Dense)            multiple                  16004000  
+                                                                 
+ dense_13 (Dense)            multiple                  16004000  
+                                                                 
+ dense_14 (Dense)            multiple                  16004000  
+                                                                 
+ dense_15 (Dense)            multiple                  16004000  
+                                                                 
+ dense_16 (Dense)            multiple                  16004000  
+                                                                 
+ dense_17 (Dense)            multiple                  16004000  
+                                                                 
+ dense_18 (Dense)            multiple                  16004000  
+                                                                 
+ dense_19 (Dense)            multiple                  16004000  
+                                                                 
+ dense_20 (Dense)            multiple                  16004000  
+                                                                 
+ dense_21 (Dense)            multiple                  16004000  
+                                                                 
+ dense_22 (Dense)            multiple                  16004000  
+                                                                 
+ dense_23 (Dense)            multiple                  16004000  
+                                                                 
+ dense_24 (Dense)            multiple                  16004000  
+                                                                 
+ dense_25 (Dense)            multiple                  16004000  
+                                                                 
+ dense_26 (Dense)            multiple                  16004000  
+                                                                 
+ dense_27 (Dense)            multiple                  16004000  
+                                                                 
+ dense_28 (Dense)            multiple                  16004000  
+                                                                 
+ dense_29 (Dense)            multiple                  16004000  
+                                                                 
+ dense_30 (Dense)            multiple                  16004000  
+                                                                 
+ dense_31 (Dense)            multiple                  16004000  
+                                                                 
+ dense_32 (Dense)            multiple                  16004000  
+                                                                 
+ dense_33 (Dense)            multiple                  16004000  
+                                                                 
+ dense_34 (Dense)            multiple                  16004000  
+                                                                 
+ dense_35 (Dense)            multiple                  16004000  
+                                                                 
+ dense_36 (Dense)            multiple                  16004000  
+                                                                 
+ dense_37 (Dense)            multiple                  16004000  
+                                                                 
+ dense_38 (Dense)            multiple                  16004000  
+                                                                 
+ dense_39 (Dense)            multiple                  16004000  
+                                                                 
+ dense_40 (Dense)            multiple                  16004000  
+                                                                 
+ dense_41 (Dense)            multiple                  16004000  
+                                                                 
+ dense_42 (Dense)            multiple                  16004000  
+                                                                 
+ dense_43 (Dense)            multiple                  16004000  
+                                                                 
+ dense_44 (Dense)            multiple                  16004000  
+                                                                 
+ dense_45 (Dense)            multiple                  16004000  
+                                                                 
+ dense_46 (Dense)            multiple                  16004000  
+                                                                 
+ dense_47 (Dense)            multiple                  16004000  
+                                                                 
+ dense_48 (Dense)            multiple                  16004000  
+                                                                 
+ dense_49 (Dense)            multiple                  16004000  
+                                                                 
+ add_0 (Add)                 multiple                  0         
+                                                                 
+ add_1 (Add)                 multiple                  0         
+                                                                 
+ add_2 (Add)                 multiple                  0         
+                                                                 
+ add_3 (Add)                 multiple                  0         
+                                                                 
+ add_4 (Add)                 multiple                  0         
+                                                                 
+ add_5 (Add)                 multiple                  0         
+                                                                 
+ add_6 (Add)                 multiple                  0         
+                                                                 
+ add_7 (Add)                 multiple                  0         
+                                                                 
+ add_8 (Add)                 multiple                  0         
+                                                                 
+ add_9 (Add)                 multiple                  0         
+                                                                 
+ add_10 (Add)                multiple                  0         
+                                                                 
+ add_11 (Add)                multiple                  0         
+                                                                 
+ add_12 (Add)                multiple                  0         
+                                                                 
+ add_13 (Add)                multiple                  0         
+                                                                 
+ add_14 (Add)                multiple                  0         
+                                                                 
+ add_15 (Add)                multiple                  0         
+                                                                 
+ add_16 (Add)                multiple                  0         
+                                                                 
+ add_17 (Add)                multiple                  0         
+                                                                 
+ add_18 (Add)                multiple                  0         
+                                                                 
+ add_19 (Add)                multiple                  0         
+                                                                 
+ add_20 (Add)                multiple                  0         
+                                                                 
+ add_21 (Add)                multiple                  0         
+                                                                 
+ add_22 (Add)                multiple                  0         
+                                                                 
+ add_23 (Add)                multiple                  0         
+                                                                 
+ add_24 (Add)                multiple                  0         
+                                                                 
+=================================================================
+Total params: 801000000 (2.98 GB)
+Trainable params: 800600000 (2.98 GB)
+Non-trainable params: 400000 (1.53 MB)
+_________________________________________________________________
+Model: "output"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ output (Dense)              multiple                  40010     
+                                                                 
+=================================================================
+Total params: 40010 (156.29 KB)
+Trainable params: 40010 (156.29 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Model: "residual_block"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ activation_0 (Activation)   multiple                  0         
+                                                                 
+ activation_1 (Activation)   multiple                  0         
+                                                                 
+ activation_2 (Activation)   multiple                  0         
+                                                                 
+ activation_3 (Activation)   multiple                  0         
+                                                                 
+ activation_4 (Activation)   multiple                  0         
+                                                                 
+ activation_5 (Activation)   multiple                  0         
+                                                                 
+ activation_6 (Activation)   multiple                  0         
+                                                                 
+ activation_7 (Activation)   multiple                  0         
+                                                                 
+ activation_8 (Activation)   multiple                  0         
+                                                                 
+ activation_9 (Activation)   multiple                  0         
+                                                                 
+ activation_10 (Activation)  multiple                  0         
+                                                                 
+ activation_11 (Activation)  multiple                  0         
+                                                                 
+ activation_12 (Activation)  multiple                  0         
+                                                                 
+ activation_13 (Activation)  multiple                  0         
+                                                                 
+ activation_14 (Activation)  multiple                  0         
+                                                                 
+ activation_15 (Activation)  multiple                  0         
+                                                                 
+ activation_16 (Activation)  multiple                  0         
+                                                                 
+ activation_17 (Activation)  multiple                  0         
+                                                                 
+ activation_18 (Activation)  multiple                  0         
+                                                                 
+ activation_19 (Activation)  multiple                  0         
+                                                                 
+ activation_20 (Activation)  multiple                  0         
+                                                                 
+ activation_21 (Activation)  multiple                  0         
+                                                                 
+ activation_22 (Activation)  multiple                  0         
+                                                                 
+ activation_23 (Activation)  multiple                  0         
+                                                                 
+ activation_24 (Activation)  multiple                  0         
+                                                                 
+ activation_25 (Activation)  multiple                  0         
+                                                                 
+ activation_26 (Activation)  multiple                  0         
+                                                                 
+ activation_27 (Activation)  multiple                  0         
+                                                                 
+ activation_28 (Activation)  multiple                  0         
+                                                                 
+ activation_29 (Activation)  multiple                  0         
+                                                                 
+ activation_30 (Activation)  multiple                  0         
+                                                                 
+ activation_31 (Activation)  multiple                  0         
+                                                                 
+ activation_32 (Activation)  multiple                  0         
+                                                                 
+ activation_33 (Activation)  multiple                  0         
+                                                                 
+ activation_34 (Activation)  multiple                  0         
+                                                                 
+ activation_35 (Activation)  multiple                  0         
+                                                                 
+ activation_36 (Activation)  multiple                  0         
+                                                                 
+ activation_37 (Activation)  multiple                  0         
+                                                                 
+ activation_38 (Activation)  multiple                  0         
+                                                                 
+ activation_39 (Activation)  multiple                  0         
+                                                                 
+ activation_40 (Activation)  multiple                  0         
+                                                                 
+ activation_41 (Activation)  multiple                  0         
+                                                                 
+ activation_42 (Activation)  multiple                  0         
+                                                                 
+ activation_43 (Activation)  multiple                  0         
+                                                                 
+ activation_44 (Activation)  multiple                  0         
+                                                                 
+ activation_45 (Activation)  multiple                  0         
+                                                                 
+ activation_46 (Activation)  multiple                  0         
+                                                                 
+ activation_47 (Activation)  multiple                  0         
+                                                                 
+ activation_48 (Activation)  multiple                  0         
+                                                                 
+ activation_49 (Activation)  multiple                  0         
+                                                                 
+ dropout_0 (Dropout)         multiple                  0         
+                                                                 
+ dropout_1 (Dropout)         multiple                  0         
+                                                                 
+ dropout_2 (Dropout)         multiple                  0         
+                                                                 
+ dropout_3 (Dropout)         multiple                  0         
+                                                                 
+ dropout_4 (Dropout)         multiple                  0         
+                                                                 
+ dropout_5 (Dropout)         multiple                  0         
+                                                                 
+ dropout_6 (Dropout)         multiple                  0         
+                                                                 
+ dropout_7 (Dropout)         multiple                  0         
+                                                                 
+ dropout_8 (Dropout)         multiple                  0         
+                                                                 
+ dropout_9 (Dropout)         multiple                  0         
+                                                                 
+ dropout_10 (Dropout)        multiple                  0         
+                                                                 
+ dropout_11 (Dropout)        multiple                  0         
+                                                                 
+ dropout_12 (Dropout)        multiple                  0         
+                                                                 
+ dropout_13 (Dropout)        multiple                  0         
+                                                                 
+ dropout_14 (Dropout)        multiple                  0         
+                                                                 
+ dropout_15 (Dropout)        multiple                  0         
+                                                                 
+ dropout_16 (Dropout)        multiple                  0         
+                                                                 
+ dropout_17 (Dropout)        multiple                  0         
+                                                                 
+ dropout_18 (Dropout)        multiple                  0         
+                                                                 
+ dropout_19 (Dropout)        multiple                  0         
+                                                                 
+ dropout_20 (Dropout)        multiple                  0         
+                                                                 
+ dropout_21 (Dropout)        multiple                  0         
+                                                                 
+ dropout_22 (Dropout)        multiple                  0         
+                                                                 
+ dropout_23 (Dropout)        multiple                  0         
+                                                                 
+ dropout_24 (Dropout)        multiple                  0         
+                                                                 
+ dropout_25 (Dropout)        multiple                  0         
+                                                                 
+ dropout_26 (Dropout)        multiple                  0         
+                                                                 
+ dropout_27 (Dropout)        multiple                  0         
+                                                                 
+ dropout_28 (Dropout)        multiple                  0         
+                                                                 
+ dropout_29 (Dropout)        multiple                  0         
+                                                                 
+ dropout_30 (Dropout)        multiple                  0         
+                                                                 
+ dropout_31 (Dropout)        multiple                  0         
+                                                                 
+ dropout_32 (Dropout)        multiple                  0         
+                                                                 
+ dropout_33 (Dropout)        multiple                  0         
+                                                                 
+ dropout_34 (Dropout)        multiple                  0         
+                                                                 
+ dropout_35 (Dropout)        multiple                  0         
+                                                                 
+ dropout_36 (Dropout)        multiple                  0         
+                                                                 
+ dropout_37 (Dropout)        multiple                  0         
+                                                                 
+ dropout_38 (Dropout)        multiple                  0         
+                                                                 
+ dropout_39 (Dropout)        multiple                  0         
+                                                                 
+ dropout_40 (Dropout)        multiple                  0         
+                                                                 
+ dropout_41 (Dropout)        multiple                  0         
+                                                                 
+ dropout_42 (Dropout)        multiple                  0         
+                                                                 
+ dropout_43 (Dropout)        multiple                  0         
+                                                                 
+ dropout_44 (Dropout)        multiple                  0         
+                                                                 
+ dropout_45 (Dropout)        multiple                  0         
+                                                                 
+ dropout_46 (Dropout)        multiple                  0         
+                                                                 
+ dropout_47 (Dropout)        multiple                  0         
+                                                                 
+ dropout_48 (Dropout)        multiple                  0         
+                                                                 
+ dropout_49 (Dropout)        multiple                  0         
+                                                                 
+ batch_norm_0 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_1 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_2 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_3 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_4 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_5 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_6 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_7 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_8 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_9 (BatchNormali  multiple                  16000     
+ zation)                                                         
+                                                                 
+ batch_norm_10 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_11 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_12 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_13 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_14 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_15 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_16 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_17 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_18 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_19 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_20 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_21 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_22 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_23 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_24 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_25 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_26 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_27 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_28 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_29 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_30 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_31 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_32 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_33 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_34 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_35 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_36 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_37 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_38 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_39 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_40 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_41 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_42 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_43 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_44 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_45 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_46 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_47 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_48 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ batch_norm_49 (BatchNormal  multiple                  16000     
+ ization)                                                        
+                                                                 
+ dense_0 (Dense)             multiple                  16004000  
+                                                                 
+ dense_1 (Dense)             multiple                  16004000  
+                                                                 
+ dense_2 (Dense)             multiple                  16004000  
+                                                                 
+ dense_3 (Dense)             multiple                  16004000  
+                                                                 
+ dense_4 (Dense)             multiple                  16004000  
+                                                                 
+ dense_5 (Dense)             multiple                  16004000  
+                                                                 
+ dense_6 (Dense)             multiple                  16004000  
+                                                                 
+ dense_7 (Dense)             multiple                  16004000  
+                                                                 
+ dense_8 (Dense)             multiple                  16004000  
+                                                                 
+ dense_9 (Dense)             multiple                  16004000  
+                                                                 
+ dense_10 (Dense)            multiple                  16004000  
+                                                                 
+ dense_11 (Dense)            multiple                  16004000  
+                                                                 
+ dense_12 (Dense)            multiple                  16004000  
+                                                                 
+ dense_13 (Dense)            multiple                  16004000  
+                                                                 
+ dense_14 (Dense)            multiple                  16004000  
+                                                                 
+ dense_15 (Dense)            multiple                  16004000  
+                                                                 
+ dense_16 (Dense)            multiple                  16004000  
+                                                                 
+ dense_17 (Dense)            multiple                  16004000  
+                                                                 
+ dense_18 (Dense)            multiple                  16004000  
+                                                                 
+ dense_19 (Dense)            multiple                  16004000  
+                                                                 
+ dense_20 (Dense)            multiple                  16004000  
+                                                                 
+ dense_21 (Dense)            multiple                  16004000  
+                                                                 
+ dense_22 (Dense)            multiple                  16004000  
+                                                                 
+ dense_23 (Dense)            multiple                  16004000  
+                                                                 
+ dense_24 (Dense)            multiple                  16004000  
+                                                                 
+ dense_25 (Dense)            multiple                  16004000  
+                                                                 
+ dense_26 (Dense)            multiple                  16004000  
+                                                                 
+ dense_27 (Dense)            multiple                  16004000  
+                                                                 
+ dense_28 (Dense)            multiple                  16004000  
+                                                                 
+ dense_29 (Dense)            multiple                  16004000  
+                                                                 
+ dense_30 (Dense)            multiple                  16004000  
+                                                                 
+ dense_31 (Dense)            multiple                  16004000  
+                                                                 
+ dense_32 (Dense)            multiple                  16004000  
+                                                                 
+ dense_33 (Dense)            multiple                  16004000  
+                                                                 
+ dense_34 (Dense)            multiple                  16004000  
+                                                                 
+ dense_35 (Dense)            multiple                  16004000  
+                                                                 
+ dense_36 (Dense)            multiple                  16004000  
+                                                                 
+ dense_37 (Dense)            multiple                  16004000  
+                                                                 
+ dense_38 (Dense)            multiple                  16004000  
+                                                                 
+ dense_39 (Dense)            multiple                  16004000  
+                                                                 
+ dense_40 (Dense)            multiple                  16004000  
+                                                                 
+ dense_41 (Dense)            multiple                  16004000  
+                                                                 
+ dense_42 (Dense)            multiple                  16004000  
+                                                                 
+ dense_43 (Dense)            multiple                  16004000  
+                                                                 
+ dense_44 (Dense)            multiple                  16004000  
+                                                                 
+ dense_45 (Dense)            multiple                  16004000  
+                                                                 
+ dense_46 (Dense)            multiple                  16004000  
+                                                                 
+ dense_47 (Dense)            multiple                  16004000  
+                                                                 
+ dense_48 (Dense)            multiple                  16004000  
+                                                                 
+ dense_49 (Dense)            multiple                  16004000  
+                                                                 
+ add_0 (Add)                 multiple                  0         
+                                                                 
+ add_1 (Add)                 multiple                  0         
+                                                                 
+ add_2 (Add)                 multiple                  0         
+                                                                 
+ add_3 (Add)                 multiple                  0         
+                                                                 
+ add_4 (Add)                 multiple                  0         
+                                                                 
+ add_5 (Add)                 multiple                  0         
+                                                                 
+ add_6 (Add)                 multiple                  0         
+                                                                 
+ add_7 (Add)                 multiple                  0         
+                                                                 
+ add_8 (Add)                 multiple                  0         
+                                                                 
+ add_9 (Add)                 multiple                  0         
+                                                                 
+ add_10 (Add)                multiple                  0         
+                                                                 
+ add_11 (Add)                multiple                  0         
+                                                                 
+ add_12 (Add)                multiple                  0         
+                                                                 
+ add_13 (Add)                multiple                  0         
+                                                                 
+ add_14 (Add)                multiple                  0         
+                                                                 
+ add_15 (Add)                multiple                  0         
+                                                                 
+ add_16 (Add)                multiple                  0         
+                                                                 
+ add_17 (Add)                multiple                  0         
+                                                                 
+ add_18 (Add)                multiple                  0         
+                                                                 
+ add_19 (Add)                multiple                  0         
+                                                                 
+ add_20 (Add)                multiple                  0         
+                                                                 
+ add_21 (Add)                multiple                  0         
+                                                                 
+ add_22 (Add)                multiple                  0         
+                                                                 
+ add_23 (Add)                multiple                  0         
+                                                                 
+ add_24 (Add)                multiple                  0         
+                                                                 
+=================================================================
+Total params: 801000000 (2.98 GB)
+Trainable params: 800600000 (2.98 GB)
+Non-trainable params: 400000 (1.53 MB)
+_________________________________________________________________
+[codecarbon INFO @ 13:07:49] [setup] RAM Tracking...
+[codecarbon INFO @ 13:07:49] [setup] GPU Tracking...
+[codecarbon INFO @ 13:07:49] No GPU found.
+[codecarbon INFO @ 13:07:49] [setup] CPU Tracking...
+[codecarbon INFO @ 13:07:49] Tracking Intel CPU via RAPL interface
+[codecarbon INFO @ 13:07:49] >>> Tracker's metadata:
+[codecarbon INFO @ 13:07:49]   Platform system: Linux-4.18.0-477.10.1.el8_8.x86_64-x86_64-with-glibc2.28
+[codecarbon INFO @ 13:07:49]   Python version: 3.11.9
+[codecarbon INFO @ 13:07:49]   CodeCarbon version: 2.5.0
+[codecarbon INFO @ 13:07:49]   Available RAM : 246.064 GB
+[codecarbon INFO @ 13:07:49]   CPU count: 104
+[codecarbon INFO @ 13:07:49]   CPU model: Intel(R) Xeon(R) Platinum 8470QL
+[codecarbon INFO @ 13:07:49]   GPU count: None
+[codecarbon INFO @ 13:07:49]   GPU model: None
+[codecarbon INFO @ 13:07:52] Saving emissions data to file /home/ttahmid/applications_test/tf-melt/examples/emissions.csv
+Epoch 1/10
+2024-07-22 13:08:03.054800: I tensorflow/core/grappler/optimizers/auto_mixed_precision.cc:2254] Converted 385/11857 nodes to bfloat16 precision using 104 cast(s) to bfloat16 (excluding Const and Variable casts)
+[codecarbon INFO @ 13:08:07] Energy consumed for RAM : 0.000385 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:08:07] Energy consumed for all CPUs : 0.001790 kWh. Total CPU Power : 429.3783117600018 W
+[codecarbon INFO @ 13:08:07] 0.002174 kWh of electricity used since the beginning.
+ 1/10 [==>...........................] - ETA: 2:15 - loss: 5.3650 2/10 [=====>........................] - ETA: 17s - loss: 118.6349 3/10 [========>.....................] - ETA: 15s - loss: 85.3306  4/10 [===========>..................] - ETA: 13s - loss: 71.2075 5/10 [==============>...............] - ETA: 11s - loss: 60.0969 6/10 [=================>............] - ETA: 9s - loss: 51.1595  7/10 [====================>.........] - ETA: 7s - loss: 44.5994[codecarbon INFO @ 13:08:22] Energy consumed for RAM : 0.000769 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:08:22] Energy consumed for all CPUs : 0.004658 kWh. Total CPU Power : 688.3484989954359 W
+[codecarbon INFO @ 13:08:22] 0.005427 kWh of electricity used since the beginning.
+ 8/10 [=======================>......] - ETA: 4s - loss: 39.5414 9/10 [==========================>...] - ETA: 2s - loss: 36.118010/10 [==============================] - ETA: 0s - loss: 33.38762024-07-22 13:08:29.828353: I tensorflow/core/grappler/optimizers/auto_mixed_precision.cc:2254] Converted 278/1167 nodes to bfloat16 precision using 102 cast(s) to bfloat16 (excluding Const and Variable casts)
+10/10 [==============================] - 38s 3s/step - loss: 33.3876 - val_loss: 42026921875227292093906944.0000
+Epoch 2/10
+ 1/10 [==>...........................] - ETA: 21s - loss: 4.0924 2/10 [=====>........................] - ETA: 17s - loss: 3.6972[codecarbon INFO @ 13:08:37] Energy consumed for RAM : 0.001154 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:08:37] Energy consumed for all CPUs : 0.007466 kWh. Total CPU Power : 673.1533716740161 W
+[codecarbon INFO @ 13:08:37] 0.008620 kWh of electricity used since the beginning.
+ 3/10 [========>.....................] - ETA: 16s - loss: 3.5456 4/10 [===========>..................] - ETA: 14s - loss: 3.2053 5/10 [==============>...............] - ETA: 12s - loss: 3.0699 6/10 [=================>............] - ETA: 9s - loss: 2.9455  7/10 [====================>.........] - ETA: 7s - loss: 2.7935 8/10 [=======================>......] - ETA: 4s - loss: 2.6625 9/10 [==========================>...] - ETA: 2s - loss: 2.5718[codecarbon INFO @ 13:08:52] Energy consumed for RAM : 0.001538 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:08:52] Energy consumed for all CPUs : 0.010334 kWh. Total CPU Power : 688.3019926884847 W
+[codecarbon INFO @ 13:08:52] 0.011872 kWh of electricity used since the beginning.
+10/10 [==============================] - ETA: 0s - loss: 2.492410/10 [==============================] - 25s 3s/step - loss: 2.4924 - val_loss: 1485854682717432301223936.0000
+Epoch 3/10
+ 1/10 [==>...........................] - ETA: 23s - loss: 1.5292 2/10 [=====>........................] - ETA: 18s - loss: 1.5498 3/10 [========>.....................] - ETA: 17s - loss: 1.5871 4/10 [===========>..................] - ETA: 14s - loss: 1.5881[codecarbon INFO @ 13:09:07] Energy consumed for RAM : 0.001923 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:09:07] Energy consumed for all CPUs : 0.013191 kWh. Total CPU Power : 685.281989244377 W
+[codecarbon INFO @ 13:09:07] 0.015114 kWh of electricity used since the beginning.
+ 5/10 [==============>...............] - ETA: 12s - loss: 1.5725 6/10 [=================>............] - ETA: 9s - loss: 1.5541  7/10 [====================>.........] - ETA: 7s - loss: 1.5489 8/10 [=======================>......] - ETA: 4s - loss: 1.5597 9/10 [==========================>...] - ETA: 2s - loss: 1.561110/10 [==============================] - ETA: 0s - loss: 1.549410/10 [==============================] - 26s 3s/step - loss: 1.5494 - val_loss: 175040175263985958912.0000
+Epoch 4/10
+[codecarbon INFO @ 13:09:22] Energy consumed for RAM : 0.002307 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:09:22] Energy consumed for all CPUs : 0.016057 kWh. Total CPU Power : 687.9616267000878 W
+[codecarbon INFO @ 13:09:22] 0.018364 kWh of electricity used since the beginning.
+ 1/10 [==>...........................] - ETA: 22s - loss: 1.5039 2/10 [=====>........................] - ETA: 19s - loss: 1.5239 3/10 [========>.....................] - ETA: 17s - loss: 1.4894 4/10 [===========>..................] - ETA: 14s - loss: 1.4706 5/10 [==============>...............] - ETA: 12s - loss: 1.4699 6/10 [=================>............] - ETA: 10s - loss: 1.4580[codecarbon INFO @ 13:09:37] Energy consumed for RAM : 0.002692 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:09:37] Energy consumed for all CPUs : 0.018939 kWh. Total CPU Power : 691.6058839578666 W
+[codecarbon INFO @ 13:09:37] 0.021631 kWh of electricity used since the beginning.
+ 7/10 [====================>.........] - ETA: 7s - loss: 1.4698  8/10 [=======================>......] - ETA: 5s - loss: 1.4636 9/10 [==========================>...] - ETA: 2s - loss: 1.460110/10 [==============================] - ETA: 0s - loss: 1.458210/10 [==============================] - 26s 3s/step - loss: 1.4582 - val_loss: 37109028538548224.0000
+Epoch 5/10
+ 1/10 [==>...........................] - ETA: 23s - loss: 1.4578 2/10 [=====>........................] - ETA: 20s - loss: 1.4840[codecarbon INFO @ 13:09:52] Energy consumed for RAM : 0.003077 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:09:52] Energy consumed for all CPUs : 0.021812 kWh. Total CPU Power : 689.1596447492352 W
+[codecarbon INFO @ 13:09:52] 0.024889 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 13:09:52] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 13:09:52] Regional emissions retrieval failed. Falling back on country emissions.
+[codecarbon INFO @ 13:09:52] 0.076316 g.CO2eq/s mean an estimation of 2,406.7158170949447 kg.CO2eq/year
+ 3/10 [========>.....................] - ETA: 17s - loss: 1.4991 4/10 [===========>..................] - ETA: 15s - loss: 1.4810 5/10 [==============>...............] - ETA: 12s - loss: 1.4715 6/10 [=================>............] - ETA: 10s - loss: 1.4822 7/10 [====================>.........] - ETA: 7s - loss: 1.4636 [codecarbon INFO @ 13:10:07] Energy consumed for RAM : 0.003461 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:10:07] Energy consumed for all CPUs : 0.024671 kWh. Total CPU Power : 685.672550074454 W
+[codecarbon INFO @ 13:10:07] 0.028133 kWh of electricity used since the beginning.
+ 8/10 [=======================>......] - ETA: 5s - loss: 1.4604 9/10 [==========================>...] - ETA: 2s - loss: 1.447410/10 [==============================] - ETA: 0s - loss: 1.442110/10 [==============================] - 26s 3s/step - loss: 1.4421 - val_loss: 103014438273024.0000
+Epoch 6/10
+ 1/10 [==>...........................] - ETA: 22s - loss: 1.4144 2/10 [=====>........................] - ETA: 20s - loss: 1.4451 3/10 [========>.....................] - ETA: 17s - loss: 1.4234[codecarbon INFO @ 13:10:22] Energy consumed for RAM : 0.003846 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:10:22] Energy consumed for all CPUs : 0.027532 kWh. Total CPU Power : 686.5254679726428 W
+[codecarbon INFO @ 13:10:22] 0.031377 kWh of electricity used since the beginning.
+ 4/10 [===========>..................] - ETA: 14s - loss: 1.4138 5/10 [==============>...............] - ETA: 12s - loss: 1.4151 6/10 [=================>............] - ETA: 9s - loss: 1.4333  7/10 [====================>.........] - ETA: 7s - loss: 1.4257 8/10 [=======================>......] - ETA: 5s - loss: 1.4144 9/10 [==========================>...] - ETA: 2s - loss: 1.4176[codecarbon INFO @ 13:10:37] Energy consumed for RAM : 0.004230 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:10:37] Energy consumed for all CPUs : 0.030389 kWh. Total CPU Power : 685.8556849610745 W
+[codecarbon INFO @ 13:10:37] 0.034620 kWh of electricity used since the beginning.
+10/10 [==============================] - ETA: 0s - loss: 1.416910/10 [==============================] - 26s 3s/step - loss: 1.4169 - val_loss: 165327847424.0000
+Epoch 7/10
+ 1/10 [==>...........................] - ETA: 23s - loss: 1.3391 2/10 [=====>........................] - ETA: 21s - loss: 1.3853 3/10 [========>.....................] - ETA: 18s - loss: 1.3848 4/10 [===========>..................] - ETA: 15s - loss: 1.3871[codecarbon INFO @ 13:10:52] Energy consumed for RAM : 0.004615 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:10:52] Energy consumed for all CPUs : 0.033232 kWh. Total CPU Power : 681.4069222623018 W
+[codecarbon INFO @ 13:10:52] 0.037847 kWh of electricity used since the beginning.
+ 5/10 [==============>...............] - ETA: 13s - loss: 1.3938 6/10 [=================>............] - ETA: 10s - loss: 1.4036 7/10 [====================>.........] - ETA: 7s - loss: 1.3931  8/10 [=======================>......] - ETA: 5s - loss: 1.3946 9/10 [==========================>...] - ETA: 2s - loss: 1.398310/10 [==============================] - ETA: 0s - loss: 1.389110/10 [==============================] - 27s 3s/step - loss: 1.3891 - val_loss: 497675712.0000
+Epoch 8/10
+[codecarbon INFO @ 13:11:07] Energy consumed for RAM : 0.005000 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:11:07] Energy consumed for all CPUs : 0.036078 kWh. Total CPU Power : 683.1118100871281 W
+[codecarbon INFO @ 13:11:07] 0.041077 kWh of electricity used since the beginning.
+ 1/10 [==>...........................] - ETA: 25s - loss: 1.4345 2/10 [=====>........................] - ETA: 22s - loss: 1.4684 3/10 [========>.....................] - ETA: 19s - loss: 1.4402 4/10 [===========>..................] - ETA: 17s - loss: 1.4433 5/10 [==============>...............] - ETA: 14s - loss: 1.4262[codecarbon INFO @ 13:11:22] Energy consumed for RAM : 0.005384 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:11:22] Energy consumed for all CPUs : 0.038907 kWh. Total CPU Power : 679.0484441644733 W
+[codecarbon INFO @ 13:11:22] 0.044291 kWh of electricity used since the beginning.
+ 6/10 [=================>............] - ETA: 11s - loss: 1.4513 7/10 [====================>.........] - ETA: 8s - loss: 1.4563  8/10 [=======================>......] - ETA: 5s - loss: 1.4443 9/10 [==========================>...] - ETA: 2s - loss: 1.442010/10 [==============================] - ETA: 0s - loss: 1.442110/10 [==============================] - 26s 3s/step - loss: 1.4421 - val_loss: 11610111.0000
+Epoch 9/10
+ 1/10 [==>...........................] - ETA: 20s - loss: 1.4511[codecarbon INFO @ 13:11:37] Energy consumed for RAM : 0.005769 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:11:37] Energy consumed for all CPUs : 0.041790 kWh. Total CPU Power : 691.6204940200972 W
+[codecarbon INFO @ 13:11:37] 0.047558 kWh of electricity used since the beginning.
+ 2/10 [=====>........................] - ETA: 18s - loss: 1.4103 3/10 [========>.....................] - ETA: 15s - loss: 1.3949 4/10 [===========>..................] - ETA: 13s - loss: 1.3883 5/10 [==============>...............] - ETA: 11s - loss: 1.3853 6/10 [=================>............] - ETA: 9s - loss: 1.3830  7/10 [====================>.........] - ETA: 6s - loss: 1.3920 8/10 [=======================>......] - ETA: 4s - loss: 1.3948[codecarbon INFO @ 13:11:52] Energy consumed for RAM : 0.006153 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:11:52] Energy consumed for all CPUs : 0.044672 kWh. Total CPU Power : 691.6583660710006 W
+[codecarbon INFO @ 13:11:52] 0.050825 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 13:11:52] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 13:11:52] Regional emissions retrieval failed. Falling back on country emissions.
+[codecarbon INFO @ 13:11:52] 0.079535 g.CO2eq/s mean an estimation of 2,508.209278571702 kg.CO2eq/year
+ 9/10 [==========================>...] - ETA: 2s - loss: 1.393010/10 [==============================] - ETA: 0s - loss: 1.395210/10 [==============================] - 24s 2s/step - loss: 1.3952 - val_loss: 554358.8750
+Epoch 10/10
+ 1/10 [==>...........................] - ETA: 20s - loss: 1.3532 2/10 [=====>........................] - ETA: 18s - loss: 1.3726 3/10 [========>.....................] - ETA: 16s - loss: 1.3627 4/10 [===========>..................] - ETA: 13s - loss: 1.3665[codecarbon INFO @ 13:12:07] Energy consumed for RAM : 0.006537 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:12:07] Energy consumed for all CPUs : 0.047547 kWh. Total CPU Power : 690.002927707218 W
+[codecarbon INFO @ 13:12:07] 0.054084 kWh of electricity used since the beginning.
+ 5/10 [==============>...............] - ETA: 11s - loss: 1.3710 6/10 [=================>............] - ETA: 9s - loss: 1.3744  7/10 [====================>.........] - ETA: 6s - loss: 1.3774 8/10 [=======================>......] - ETA: 4s - loss: 1.3679 9/10 [==========================>...] - ETA: 2s - loss: 1.366210/10 [==============================] - ETA: 0s - loss: 1.364210/10 [==============================] - 24s 2s/step - loss: 1.3642 - val_loss: 30283.9238
+[codecarbon INFO @ 13:12:21] Energy consumed for RAM : 0.006884 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 13:12:21] Energy consumed for all CPUs : 0.050139 kWh. Total CPU Power : 689.3307386875291 W
+[codecarbon INFO @ 13:12:21] 0.057024 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 13:12:21] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 13:12:21] Regional emissions retrieval failed. Falling back on country emissions.
+/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/output_methods/file.py:53: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  df = pd.concat([df, pd.DataFrame.from_records([dict(total.values)])])
+Training took 268.623 seconds
+ResNet Training Summary on CPU
+FP32 training time: 417.442 seconds with loss: 1.3808398246765137
+BF16 training time: 268.623 seconds with loss: 1.3642046451568604
+FP32 total consumed energy: 0.09032 J with emissions: 0.03325 kgCO2
+BF16 total consumed energy: 0.05702 J with emissions: 0.02099 kgCO2
+FP32 EDP (Energy Delay Product): 37.702 J*s
+BF16 EDP (Energy Delay Product): 15.318 J*s
+BF16 is 1.55X faster than FP32 with 0.01% accuracy loss
+BF16 reduces emissions by 36.86% and EDP by 59.37% than FP32
+[CODE_SAMPLE_COMPLETED_SUCCESFULLY]
+Job Done!
