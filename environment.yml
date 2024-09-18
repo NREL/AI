@@ -21,3 +21,4 @@ dependencies:
       - isort
       - flake8
       - sphinx
+      - ray[data,train,tune,serve]
