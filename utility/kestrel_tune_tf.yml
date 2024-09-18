@@ -1,0 +1,18 @@
+name: kestrel-tune-tf
+channels:
+  - conda-forge
+  - default
+
+dependencies:
+  - python<=3.11
+  - pip>=20.3
+  - pip:
+      - git+https://github.com/NREL/tf-melt.git
+      - jupyter
+      - matplotlib
+      - scikit-learn
+      - black
+      - isort
+      - flake8
+      - sphinx
+      - ray[data,train,tune,serve]
