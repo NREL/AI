@@ -1,0 +1,20 @@
+name: kestrel-tune-pt
+channels:
+  - conda-forge
+  - default
+
+dependencies:
+  - python<=3.11
+  - pip>=20.3
+  - pip:
+      - torch>=2.4.1
+      - git+https://github.com/NREL/pt-melt.git
+      - jupyter
+      - torchinfo
+      - matplotlib
+      - scikit-learn
+      - black
+      - isort
+      - flake8
+      - sphinx
+      - ray[data,train,tune,serve]
