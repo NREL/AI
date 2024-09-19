@@ -1,22 +1,16 @@
-name: nrel-ai
+name: kestrel-tune-tf
 channels:
   - conda-forge
   - default
-  - pytorch
 
 dependencies:
   - python<=3.11
-  - jupyter
   - pip>=20.3
   - pip:
       - git+https://github.com/NREL/tf-melt.git
-      - git+https://github.com/NREL/pt-melt.git
-      # - torch
-      # - torchvision
-      - torchinfo
+      - jupyter
       - matplotlib
       - scikit-learn
-      # - jupyter_contrib_nbextensions
       - black
       - isort
       - flake8
