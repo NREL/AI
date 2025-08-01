@@ -1,0 +1,280 @@
+Activating Intel modules.
+2024-07-03 11:14:20.146061: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-03 11:14:20.393006: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-03 11:14:20.393433: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-03 11:14:20.429877: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-03 11:14:20.522848: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-03 11:14:21.998883: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[codecarbon INFO @ 11:14:29] [setup] RAM Tracking...
+[codecarbon INFO @ 11:14:29] [setup] GPU Tracking...
+[codecarbon INFO @ 11:14:29] No GPU found.
+[codecarbon INFO @ 11:14:29] [setup] CPU Tracking...
+[codecarbon INFO @ 11:14:29] Tracking Intel CPU via RAPL interface
+[codecarbon INFO @ 11:14:29] >>> Tracker's metadata:
+[codecarbon INFO @ 11:14:29]   Platform system: Linux-4.18.0-477.10.1.el8_8.x86_64-x86_64-with-glibc2.28
+[codecarbon INFO @ 11:14:29]   Python version: 3.11.9
+[codecarbon INFO @ 11:14:29]   CodeCarbon version: 2.5.0
+[codecarbon INFO @ 11:14:29]   Available RAM : 246.064 GB
+[codecarbon INFO @ 11:14:29]   CPU count: 104
+[codecarbon INFO @ 11:14:29]   CPU model: Intel(R) Xeon(R) Platinum 8470QL
+[codecarbon INFO @ 11:14:29]   GPU count: None
+[codecarbon INFO @ 11:14:29]   GPU model: None
+[codecarbon INFO @ 11:14:32] Saving emissions data to file /home/ttahmid/applications_test/tf-melt/examples/emissions.csv
+[codecarbon INFO @ 11:14:47] Energy consumed for RAM : 0.000385 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:14:47] Energy consumed for all CPUs : 0.002816 kWh. Total CPU Power : 675.7129211542222 W
+[codecarbon INFO @ 11:14:47] 0.003201 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:15:02] Energy consumed for RAM : 0.000769 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:15:02] Energy consumed for all CPUs : 0.005669 kWh. Total CPU Power : 684.6460023880081 W
+[codecarbon INFO @ 11:15:02] 0.006437 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:15:17] Energy consumed for RAM : 0.001153 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:15:17] Energy consumed for all CPUs : 0.008524 kWh. Total CPU Power : 685.2727073820893 W
+[codecarbon INFO @ 11:15:17] 0.009677 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:15:32] Energy consumed for RAM : 0.001538 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:15:32] Energy consumed for all CPUs : 0.011379 kWh. Total CPU Power : 684.5614697494465 W
+[codecarbon INFO @ 11:15:32] 0.012917 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:15:47] Energy consumed for RAM : 0.001923 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:15:47] Energy consumed for all CPUs : 0.014241 kWh. Total CPU Power : 686.6656280981845 W
+[codecarbon INFO @ 11:15:47] 0.016163 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:16:02] Energy consumed for RAM : 0.002308 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:16:02] Energy consumed for all CPUs : 0.017097 kWh. Total CPU Power : 684.8011592245556 W
+[codecarbon INFO @ 11:16:02] 0.019405 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:16:17] Energy consumed for RAM : 0.002692 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:16:17] Energy consumed for all CPUs : 0.019960 kWh. Total CPU Power : 686.8652373144414 W
+[codecarbon INFO @ 11:16:17] 0.022653 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:16:32] Energy consumed for RAM : 0.003077 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:16:32] Energy consumed for all CPUs : 0.022821 kWh. Total CPU Power : 685.9818541881981 W
+[codecarbon INFO @ 11:16:32] 0.025898 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 11:16:32] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 11:16:32] Regional emissions retrieval failed. Falling back on country emissions.
+[codecarbon INFO @ 11:16:32] 0.079396 g.CO2eq/s mean an estimation of 2,503.8314268163094 kg.CO2eq/year
+[codecarbon INFO @ 11:16:47] Energy consumed for RAM : 0.003461 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:16:47] Energy consumed for all CPUs : 0.025684 kWh. Total CPU Power : 687.0738482739902 W
+[codecarbon INFO @ 11:16:47] 0.029145 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:17:02] Energy consumed for RAM : 0.003846 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:17:02] Energy consumed for all CPUs : 0.028543 kWh. Total CPU Power : 685.746593919687 W
+[codecarbon INFO @ 11:17:02] 0.032389 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:17:17] Energy consumed for RAM : 0.004231 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:17:17] Energy consumed for all CPUs : 0.031404 kWh. Total CPU Power : 685.982680044715 W
+[codecarbon INFO @ 11:17:17] 0.035635 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:17:32] Energy consumed for RAM : 0.004615 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:17:32] Energy consumed for all CPUs : 0.034259 kWh. Total CPU Power : 685.1932797031142 W
+[codecarbon INFO @ 11:17:32] 0.038875 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:17:47] Energy consumed for RAM : 0.005000 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:17:47] Energy consumed for all CPUs : 0.037130 kWh. Total CPU Power : 689.1248786169533 W
+[codecarbon INFO @ 11:17:47] 0.042130 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:18:02] Energy consumed for RAM : 0.005385 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:18:02] Energy consumed for all CPUs : 0.039990 kWh. Total CPU Power : 685.4806889740174 W
+[codecarbon INFO @ 11:18:02] 0.045375 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:18:17] Energy consumed for RAM : 0.005769 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:18:17] Energy consumed for all CPUs : 0.042849 kWh. Total CPU Power : 686.3052616934572 W
+[codecarbon INFO @ 11:18:17] 0.048618 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:18:32] Energy consumed for RAM : 0.006154 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:18:32] Energy consumed for all CPUs : 0.045701 kWh. Total CPU Power : 684.0378337195268 W
+[codecarbon INFO @ 11:18:32] 0.051855 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 11:18:32] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 11:18:32] Regional emissions retrieval failed. Falling back on country emissions.
+[codecarbon INFO @ 11:18:32] 0.079582 g.CO2eq/s mean an estimation of 2,509.7068944677408 kg.CO2eq/year
+[codecarbon INFO @ 11:18:47] Energy consumed for RAM : 0.006538 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:18:47] Energy consumed for all CPUs : 0.048552 kWh. Total CPU Power : 684.1143440458344 W
+[codecarbon INFO @ 11:18:47] 0.055090 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:19:02] Energy consumed for RAM : 0.006923 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:19:02] Energy consumed for all CPUs : 0.051412 kWh. Total CPU Power : 685.7046640062126 W
+[codecarbon INFO @ 11:19:02] 0.058335 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:19:17] Energy consumed for RAM : 0.007308 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:19:17] Energy consumed for all CPUs : 0.054272 kWh. Total CPU Power : 686.2523054141534 W
+[codecarbon INFO @ 11:19:17] 0.061580 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:19:32] Energy consumed for RAM : 0.007692 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:19:32] Energy consumed for all CPUs : 0.057137 kWh. Total CPU Power : 687.512263578489 W
+[codecarbon INFO @ 11:19:32] 0.064829 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:19:47] Energy consumed for RAM : 0.008077 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:19:47] Energy consumed for all CPUs : 0.059995 kWh. Total CPU Power : 685.2852133658515 W
+[codecarbon INFO @ 11:19:47] 0.068072 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:20:02] Energy consumed for RAM : 0.008461 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:20:02] Energy consumed for all CPUs : 0.062862 kWh. Total CPU Power : 687.8135854858745 W
+[codecarbon INFO @ 11:20:02] 0.071324 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:20:17] Energy consumed for RAM : 0.008846 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:20:17] Energy consumed for all CPUs : 0.065629 kWh. Total CPU Power : 663.7639889990011 W
+[codecarbon INFO @ 11:20:17] 0.074475 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:20:32] Energy consumed for RAM : 0.009231 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:20:32] Energy consumed for all CPUs : 0.068404 kWh. Total CPU Power : 665.5717258851473 W
+[codecarbon INFO @ 11:20:32] 0.077634 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 11:20:32] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 11:20:32] Regional emissions retrieval failed. Falling back on country emissions.
+[codecarbon INFO @ 11:20:32] 0.079032 g.CO2eq/s mean an estimation of 2,492.340803718955 kg.CO2eq/year
+[codecarbon INFO @ 11:20:47] Energy consumed for RAM : 0.009615 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:20:47] Energy consumed for all CPUs : 0.071182 kWh. Total CPU Power : 666.074356359252 W
+[codecarbon INFO @ 11:20:47] 0.080797 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:21:02] Energy consumed for RAM : 0.010000 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:21:02] Energy consumed for all CPUs : 0.073956 kWh. Total CPU Power : 665.8321346960302 W
+[codecarbon INFO @ 11:21:02] 0.083956 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:21:17] Energy consumed for RAM : 0.010384 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:21:17] Energy consumed for all CPUs : 0.076734 kWh. Total CPU Power : 667.1540126331772 W
+[codecarbon INFO @ 11:21:17] 0.087118 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:21:32] Energy consumed for RAM : 0.010768 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:21:32] Energy consumed for all CPUs : 0.079515 kWh. Total CPU Power : 667.1969002726082 W
+[codecarbon INFO @ 11:21:32] 0.090283 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:21:47] Energy consumed for RAM : 0.011153 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:21:47] Energy consumed for all CPUs : 0.082301 kWh. Total CPU Power : 668.0659133728672 W
+[codecarbon INFO @ 11:21:47] 0.093454 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:22:02] Energy consumed for RAM : 0.011537 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:22:02] Energy consumed for all CPUs : 0.085090 kWh. Total CPU Power : 669.7704134361231 W
+[codecarbon INFO @ 11:22:02] 0.096627 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:22:17] Energy consumed for RAM : 0.011921 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:22:17] Energy consumed for all CPUs : 0.087873 kWh. Total CPU Power : 668.8814838152537 W
+[codecarbon INFO @ 11:22:17] 0.099794 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:22:32] Energy consumed for RAM : 0.012306 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:22:32] Energy consumed for all CPUs : 0.090663 kWh. Total CPU Power : 669.1637921585241 W
+[codecarbon INFO @ 11:22:32] 0.102969 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 11:22:32] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 11:22:32] Regional emissions retrieval failed. Falling back on country emissions.
+[codecarbon INFO @ 11:22:32] 0.077668 g.CO2eq/s mean an estimation of 2,449.3433792567844 kg.CO2eq/year
+[codecarbon INFO @ 11:22:34] Energy consumed for RAM : 0.012347 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:22:34] Energy consumed for all CPUs : 0.090964 kWh. Total CPU Power : 670.2341053518842 W
+[codecarbon INFO @ 11:22:34] 0.103311 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 11:22:34] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 11:22:34] Regional emissions retrieval failed. Falling back on country emissions.
+[codecarbon INFO @ 11:22:36] [setup] RAM Tracking...
+[codecarbon INFO @ 11:22:36] [setup] GPU Tracking...
+[codecarbon INFO @ 11:22:36] No GPU found.
+[codecarbon INFO @ 11:22:36] [setup] CPU Tracking...
+[codecarbon INFO @ 11:22:36] Tracking Intel CPU via RAPL interface
+[codecarbon INFO @ 11:22:37] >>> Tracker's metadata:
+[codecarbon INFO @ 11:22:37]   Platform system: Linux-4.18.0-477.10.1.el8_8.x86_64-x86_64-with-glibc2.28
+[codecarbon INFO @ 11:22:37]   Python version: 3.11.9
+[codecarbon INFO @ 11:22:37]   CodeCarbon version: 2.5.0
+[codecarbon INFO @ 11:22:37]   Available RAM : 246.064 GB
+[codecarbon INFO @ 11:22:37]   CPU count: 104
+[codecarbon INFO @ 11:22:37]   CPU model: Intel(R) Xeon(R) Platinum 8470QL
+[codecarbon INFO @ 11:22:37]   GPU count: None
+[codecarbon INFO @ 11:22:37]   GPU model: None
+[codecarbon INFO @ 11:22:40] Saving emissions data to file /home/ttahmid/applications_test/tf-melt/examples/emissions.csv
+2024-07-03 11:22:40.351819: I tensorflow/core/grappler/optimizers/auto_mixed_precision.cc:2254] Converted 123/635 nodes to bfloat16 precision using 21 cast(s) to bfloat16 (excluding Const and Variable casts)
+[codecarbon INFO @ 11:22:55] Energy consumed for RAM : 0.000384 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:22:55] Energy consumed for all CPUs : 0.002864 kWh. Total CPU Power : 687.396861463877 W
+[codecarbon INFO @ 11:22:55] 0.003249 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:23:10] Energy consumed for RAM : 0.000769 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:23:10] Energy consumed for all CPUs : 0.005756 kWh. Total CPU Power : 693.2373655972168 W
+[codecarbon INFO @ 11:23:10] 0.006526 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:23:25] Energy consumed for RAM : 0.001154 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:23:25] Energy consumed for all CPUs : 0.008644 kWh. Total CPU Power : 692.9973160685112 W
+[codecarbon INFO @ 11:23:25] 0.009798 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:23:40] Energy consumed for RAM : 0.001538 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:23:40] Energy consumed for all CPUs : 0.011531 kWh. Total CPU Power : 693.0175031756613 W
+[codecarbon INFO @ 11:23:40] 0.013069 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:23:55] Energy consumed for RAM : 0.001923 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:23:55] Energy consumed for all CPUs : 0.014413 kWh. Total CPU Power : 691.5674081847935 W
+[codecarbon INFO @ 11:23:55] 0.016336 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:24:10] Energy consumed for RAM : 0.002307 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:24:10] Energy consumed for all CPUs : 0.017300 kWh. Total CPU Power : 692.4441618061398 W
+[codecarbon INFO @ 11:24:10] 0.019607 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:24:25] Energy consumed for RAM : 0.002692 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:24:25] Energy consumed for all CPUs : 0.020184 kWh. Total CPU Power : 691.7661601351316 W
+[codecarbon INFO @ 11:24:25] 0.022876 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:24:40] Energy consumed for RAM : 0.003076 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:24:40] Energy consumed for all CPUs : 0.023066 kWh. Total CPU Power : 692.0092454968892 W
+[codecarbon INFO @ 11:24:40] 0.026143 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 11:24:40] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 11:24:40] Regional emissions retrieval failed. Falling back on country emissions.
+[codecarbon INFO @ 11:24:40] 0.080161 g.CO2eq/s mean an estimation of 2,527.950133814664 kg.CO2eq/year
+[codecarbon INFO @ 11:24:55] Energy consumed for RAM : 0.003461 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:24:55] Energy consumed for all CPUs : 0.025945 kWh. Total CPU Power : 690.812928222701 W
+[codecarbon INFO @ 11:24:55] 0.029406 kWh of electricity used since the beginning.
+2024-07-03 11:25:01.498488: I tensorflow/core/grappler/optimizers/auto_mixed_precision.cc:2254] Converted 123/635 nodes to bfloat16 precision using 21 cast(s) to bfloat16 (excluding Const and Variable casts)
+[codecarbon INFO @ 11:25:10] Energy consumed for RAM : 0.003845 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:25:10] Energy consumed for all CPUs : 0.028728 kWh. Total CPU Power : 667.7137535397679 W
+[codecarbon INFO @ 11:25:10] 0.032573 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:25:25] Energy consumed for RAM : 0.004229 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:25:25] Energy consumed for all CPUs : 0.031490 kWh. Total CPU Power : 663.4148119712654 W
+[codecarbon INFO @ 11:25:25] 0.035719 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:25:40] Energy consumed for RAM : 0.004614 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:25:40] Energy consumed for all CPUs : 0.034257 kWh. Total CPU Power : 664.1491566721816 W
+[codecarbon INFO @ 11:25:40] 0.038871 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:25:55] Energy consumed for RAM : 0.004998 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:25:55] Energy consumed for all CPUs : 0.037022 kWh. Total CPU Power : 663.7910933858398 W
+[codecarbon INFO @ 11:25:55] 0.042021 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:26:10] Energy consumed for RAM : 0.005383 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:26:10] Energy consumed for all CPUs : 0.039774 kWh. Total CPU Power : 660.1855216732134 W
+[codecarbon INFO @ 11:26:10] 0.045156 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:26:25] Energy consumed for RAM : 0.005767 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:26:25] Energy consumed for all CPUs : 0.042528 kWh. Total CPU Power : 660.8859806719977 W
+[codecarbon INFO @ 11:26:25] 0.048296 kWh of electricity used since the beginning.
+[codecarbon INFO @ 11:26:40] Energy consumed for RAM : 0.006151 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:26:40] Energy consumed for all CPUs : 0.045298 kWh. Total CPU Power : 665.1721418412166 W
+[codecarbon INFO @ 11:26:40] 0.051450 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 11:26:40] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 11:26:40] Regional emissions retrieval failed. Falling back on country emissions.
+[codecarbon INFO @ 11:26:40] 0.077618 g.CO2eq/s mean an estimation of 2,447.7734745102603 kg.CO2eq/year
+[codecarbon INFO @ 11:26:53] Energy consumed for RAM : 0.006488 kWh. RAM Power : 92.27400000000002 W
+[codecarbon INFO @ 11:26:53] Energy consumed for all CPUs : 0.047719 kWh. Total CPU Power : 664.5191846201319 W
+[codecarbon INFO @ 11:26:53] 0.054207 kWh of electricity used since the beginning.
+[codecarbon ERROR @ 11:26:53] Region:  not found for Country with ISO CODE : USA
+Traceback (most recent call last):
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 142, in get_private_infra_emissions
+    return self.get_region_emissions(energy, geo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ttahmid/.conda-envs/tf-melt/lib/python3.11/site-packages/codecarbon/core/emissions.py", line 168, in get_region_emissions
+    raise ValueError(
+ValueError: Region:  not found for Country with ISO CODE : USA
+[codecarbon WARNING @ 11:26:53] Regional emissions retrieval failed. Falling back on country emissions.
+Shape of x: (50000, 100), Shape of y: (50000, 10)
+Evaluating FP32 model
+Evaluating BF16 model
+Inference Results Summary
+FP32 inference time: 481.890 seconds
+BF16 inference time: 253.182 seconds
+FP32 emissions: 0.038 kgCO2
+BF16 emissions: 0.020 kgCO2
+BF16 is 1.90X faster than FP32
+BF16 reduces emissions by 47.53%
+[INFERENCE_COMPLETED_SUCCESFULLY]
+Job Done!

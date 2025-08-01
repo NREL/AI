@@ -1,6 +1,5 @@
 # AI
 
-
 This repository serves as a collection of walkthroughs, utilities, and other resources to improve the NREL AI/ML user's quality of life, both novice and expert.
 
 The tutorial notebooks can be run using a local installation of Juypter notebooks, or they can be run using Google Colab which does not use local resources and will typically result in faster training times. Google Colab also has many of the ML prerequisites installed.
@@ -18,12 +17,25 @@ Once you have a working conda environment you can keep it up-to-date if there ha
 
 NOTE: You might need to run a separate `conda install jupyter` on your system which will allow conda to install a `jupyter` package that is better suited for your operating system instead of the default `conda-forge` version.
 
+## Machine Learning Toolboxes
+
+Some of the AI tutorials use optional Machine Learning Toolboxes (MELTs) which are separately maintained packages. These will have different dependencies but can typically be installed via pip.
+
+### TensorFlow Machine Learning Toolbox (TF-MELT)
+
+Can be installed through pip with
+
+`pip install git+https://github.com/NREL/tf-melt.git`.
+
+<!-- This repository uses the `tensorflow-probability` package to be able to handle Bayesian Neural Networks. A recent update has changed the dependencies and it might require separately installing `tf-keras` for it to work. This can be done like:
+
+`pip install tf-keras-nightly`. -->
+
 ## Overview
 
 The modern machine learning landscape is one that is divided between various packages in both Python (TensorFlow and PyTorch) and Julia. Although in recent years that has been a preference by many leading large tech companies for PyTorch, TensorFlow still remains useful for many research tasks. For scientific ML, it might be beneficial to leverage existing packages that may not be implemented in both PyTorch and TensorFlow. Therefore, each of the tutorials in the folders are implemented in TensorFlow, PyTorch, and Julia which will serve as a useful tool when considering porting existing code to a different package as needs arise.
 
 The tutorials are divided into sections aimed at covering the wide breadth of ML techniques useful for scientific and general ML.
-
 
 ## Supervised Learning
 
@@ -32,25 +44,23 @@ Supervised machine learning tasks use **labeled** datasets to train models for p
 ### Regression
 
 1. Artificial Neural Networks for Multidimensional Regression
-    * Generating multidimensional data for testing
-    * Preprocessing data for training, validation, and testing
-    * Creating and training an Artificial Neural Network (ANN)
-    * Visualizing and interogating the performance of the model
-    * Brief overview of hyperparameters
+
+   - Generating multidimensional data for testing
+   - Preprocessing data for training, validation, and testing
+   - Creating and training an Artificial Neural Network (ANN)
+   - Visualizing and interogating the performance of the model
+   - Brief overview of hyperparameters
 
 2. Uncertainty Quantification for Multidimensional Probabilistic Regression
-    * Generating multidimensional data with noise added
-    * Preprocessing data
-    * Creating and training an ANN, Bayesian Last Layer (BLL), and Bayesian Neural Network (BNN)
-    * Evaluating the ANN, BLL, and BNN to determine the epistemic and aleatoric uncertainties
-    * Visualizing and interpretting the results of the models in the context of UQ
-
-
+   - Generating multidimensional data with noise added
+   - Preprocessing data
+   - Creating and training an ANN, Bayesian Last Layer (BLL), and Bayesian Neural Network (BNN)
+   - Evaluating the ANN, BLL, and BNN to determine the epistemic and aleatoric uncertainties
+   - Visualizing and interpretting the results of the models in the context of UQ
 
 ## Unsupervised Learning
 
 Unsupervised machine learning tasks use **unlabeled** datasets to trian models for clustering tasks.
-
 
 ## Reinforcement Learning
 
